@@ -1,0 +1,42 @@
+[
+  {
+    "name": "React",
+    "icon": "FaReact"
+  },
+  {
+    "name": "Next.js",
+    "icon": "SiNextdotjs"
+  },
+  {
+    "name": "TypeScript",
+    "icon": "SiTypescript"
+  },
+  {
+    "name": "JavaScript",
+    "icon": "SiJavascript"
+  },
+  {
+    "name": "Tailwind CSS",
+    "icon": "SiTailwindcss"
+  },
+  {
+    "name": "HTML5",
+    "icon": "FaHtml5"
+  },
+  {
+    "name": "CSS3",
+    "icon": "FaCss3Alt"
+  },
+  {
+    "name": "Node.js",
+    "icon": "FaNodeJs"
+  },
+  {
+    "name": "PostgreSQL",
+    "icon": "SiPostgresql"
+  },
+  {
+    "name": "Git",
+    "icon": "FaGit"
+  }
+]

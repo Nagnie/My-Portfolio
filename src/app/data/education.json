@@ -1,0 +1,24 @@
+[
+  {
+    "id": 1,
+    "degree": "Bachelor of Science in Software Engineering",
+    "institution": "University of Science, VNUHCM",
+    "location": "Ho Chi Minh City, Vietnam",
+    "period": "2022 - 2026 (Expected)",
+    "description": "GPA: 3.62/4.0",
+    "coursework": [
+      "Object Oriented Programming",
+      "Data Structure and Algorithms",
+      "Windows Programming",
+      "Web Application Development",
+      "Introduction to Databases",
+      "Operating Systems",
+      "Computer Systems",
+      "Software Engineering",
+      "Computer Networking",
+      "Fundamentals of Artificial Intelligence",
+      "Computer Systems",
+      "Introduction to DevOps"
+    ]
+  }
+]

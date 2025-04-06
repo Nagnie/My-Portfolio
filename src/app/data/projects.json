@@ -1,0 +1,58 @@
+[
+  {
+    "id": 1,
+    "title": "E-commerce Dashboard",
+    "description": "A responsive dashboard for e-commerce analytics with real-time data visualization.",
+    "images": [
+      "/assets/project1/dashboard.jpg",
+      "/assets/project1/analytics.jpg",
+      "/assets/project1/mobile.jpg",
+      "/assets/project1/settings.jpg"
+    ],
+    "technologies": ["React", "TypeScript", "Chart.js", "Tailwind CSS"],
+    "githubUrl": "https://github.com/username/ecommerce-dashboard",
+    "liveUrl": "https://ecommerce-dashboard.example.com"
+  },
+  {
+    "id": 2,
+    "title": "Travel Blog Platform",
+    "description": "A full-stack blogging platform specialized for travel enthusiasts to share their experiences.",
+    "images": [
+      "/assets/project2/homepage.jpg",
+      "/assets/project2/blog-post.jpg",
+      "/assets/project2/user-profile.jpg",
+      "/assets/project2/mobile-view.jpg"
+    ],
+    "technologies": ["Next.js", "MongoDB", "Express", "Node.js"],
+    "githubUrl": "https://github.com/username/travel-blog",
+    "liveUrl": "https://travel-blog.example.com"
+  },
+  {
+    "id": 3,
+    "title": "Task Management App",
+    "description": "A Kanban-style task management application with drag-and-drop functionality.",
+    "images": [
+      "/assets/project3/board-view.jpg",
+      "/assets/project3/task-detail.jpg",
+      "/assets/project3/analytics.jpg",
+      "/assets/project3/calendar.jpg"
+    ],
+    "technologies": ["React", "Redux", "Firebase", "Material UI"],
+    "githubUrl": "https://github.com/username/task-management",
+    "liveUrl": "https://task-app.example.com"
+  },
+  {
+    "id": 4,
+    "title": "Weather Forecast App",
+    "description": "A weather application with location detection and 7-day forecast visualization.",
+    "images": [
+      "/assets/project4/main-screen.jpg",
+      "/assets/project4/forecast.jpg",
+      "/assets/project4/location-search.jpg",
+      "/assets/project4/settings.jpg"
+    ],
+    "technologies": ["React Native", "OpenWeather API", "Geolocation", "Styled Components"],
+    "githubUrl": "https://github.com/username/weather-app",
+    "liveUrl": "https://weather-app.example.com"
+  }
+]
