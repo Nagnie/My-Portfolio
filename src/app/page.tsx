@@ -225,7 +225,7 @@ export default function Home() {
                       </a>
                   )}
                 </div>
-                <div className="grid gap-10 md:grid-cols-2">
+                <div className="grid gap-10 grid-cols-1 lg:grid-cols-2">
                   {projects.map((project) => (
                       <div key={project.id} className="rounded-lg border bg-card p-6 shadow-sm">
                         <style>
@@ -258,7 +258,7 @@ export default function Home() {
                               dynamicBullets: true,
                             }}
                             modules={[Autoplay, Pagination]}
-                            className="w-full h-[280px] rounded poster-swiper"
+                            className="relative h-80 w-full overflow-hidden"
                         >
                           {project.images.map((img, index) => (
                               <SwiperSlide key={index}>
@@ -304,7 +304,7 @@ export default function Home() {
             <section className="py-30" id="technologies">
               <div className="container">
                 <h2 className="mb-8 text-3xl font-bold border-b pb-2">Technologies</h2>
-                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-5">
+                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-5">
                   {technologies.map((tech, index) => {
                       // @ts-ignore
                     const IconComponent = iconComponents[tech.icon];

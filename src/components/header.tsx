@@ -12,7 +12,7 @@ export function Header() {
                     </Link>
                 </div>
                 <div>
-                    <nav className="hidden gap-6 md:flex">
+                    <nav className="hidden lg:gap-15 lg:flex">
                         <Link href="/" className="hover:text-foreground/80 hover:font-bold">
                             About
                         </Link>
