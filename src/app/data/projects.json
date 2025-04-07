@@ -4,11 +4,11 @@
     "title": "Nau Cosmetic",
     "description": "A responsive dashboard for e-commerce analytics with real-time data visualization.",
     "images": [
-      "/assets/project1/1.jpg",
-      "/assets/project1/2.jpg",
-      "/assets/project1/3.jpg",
-      "/assets/project1/4.jpg",
-      "/assets/project1/5.jpg"
+      "/assets/project1/1.png",
+      "/assets/project1/2.png",
+      "/assets/project1/3.png",
+      "/assets/project1/4.png",
+      "/assets/project1/5.png"
     ],
     "technologies": ["React", "Nest.js", "PostgreSQL", "Tailwind CSS", "Redux", "Docker"],
     "githubUrl": "https://github.com/Nagnie/Cosmetic_Web_Store",
@@ -21,9 +21,9 @@
     "images": [
       "/assets/project2/1.png",
       "/assets/project2/2.png",
-      "/assets/project2/3.jpg",
-      "/assets/project2/4.jpg",
-      "/assets/project2/5.jpg"
+      "/assets/project2/3.png",
+      "/assets/project2/4.png",
+      "/assets/project2/5.png"
     ],
     "technologies": ["React", "Nest.js", "PostgreSQL", "Bootstrap", "Docker"],
     "githubUrl": "https://github.com/luricisme/Website_BookingHotel",
@@ -34,12 +34,12 @@
     "title": "Task Management App",
     "description": "A Kanban-style task management application with drag-and-drop functionality.",
     "images": [
-      "/assets/project3/1.jpg",
-      "/assets/project3/2.jpg",
-      "/assets/project3/2.jpg",
-      "/assets/project3/3.jpg",
-      "/assets/project3/4.jpg",
-      "/assets/project3/5.jpg"
+      "/assets/project3/1.png",
+      "/assets/project3/2.png",
+      "/assets/project3/2.png",
+      "/assets/project3/3.png",
+      "/assets/project3/4.png",
+      "/assets/project3/5.png"
     ],
     "technologies": ["WinUI", ".NET", "C#", "PostgreSQL"],
     "githubUrl": "https://github.com/Nagnie/Cosmetic-Store-Management-System",

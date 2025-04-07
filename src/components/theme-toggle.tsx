@@ -24,7 +24,7 @@ export function ThemeToggle() {
                     <span className="sr-only">Chuyển đổi theme</span>
                 </Button>
             </DropdownMenuTrigger>
-            <DropdownMenuContent align="end">
+            <DropdownMenuContent align="end" className={"dropdown-content"} style={{ backgroundColor: "var(--background)" }}>
                 <DropdownMenuItem onClick={() => setTheme("light")} className={"hover:font-semibold cursor-pointer"}>
                     Light
                 </DropdownMenuItem>
