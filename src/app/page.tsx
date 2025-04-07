@@ -104,8 +104,7 @@ export default function Home() {
                   Hello, I am <span className="text-primary text-5xl md:text-8xl">Thao Ngan</span>
                 </h1>
                 <p className="max-w-[780px] text-xl text-muted-foreground">
-                  I’m a third-year Software Engineering student at the University of Science - VNUHCM.
-                  I have a strong passion for Frontend Development and am currently expanding my knowledge of JavaScript frameworks like React, Vue.
+                  I’m a third-year Software Engineering student at the University of Science - VNUHCM.                  I have a strong passion for Frontend Development and am currently expanding my knowledge of JavaScript frameworks like React, Vue.
                 </p>
                 <div className="flex gap-4 mt-4">
                   <Button variant="outline" asChild>
