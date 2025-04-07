@@ -49,8 +49,8 @@ export default function Home() {
     }
   }, [submitStatus]);
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  const handleSubmit = (event: { preventDefault: () => void }) => {
+    event.preventDefault();
     setIsSubmitting(true);
     setSubmitStatus(null);
 
