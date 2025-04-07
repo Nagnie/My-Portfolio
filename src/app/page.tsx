@@ -35,9 +35,9 @@ export default function Home() {
   const [isMapOpen, setIsMapOpen] = useState(false)
   const address = "Thu Duc, Ho Chi Minh City, Vietnam"
 
-  const form = useRef(null);
+  const form = useRef<HTMLFormElement>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState(null);
+  const [submitStatus, setSubmitStatus] = useState<'success' | 'error' | null>(null);
 
   useEffect(() => {
     if (submitStatus) {
@@ -53,7 +53,14 @@ export default function Home() {
     event.preventDefault();
     setIsSubmitting(true);
     setSubmitStatus(null);
+    if (!form.current) {
+      console.error("Form reference is null");
+      setSubmitStatus('error');
+      setIsSubmitting(false);
+      return;
+    }
 
+    // @ts-ignore
     emailjs.sendForm(
         'service_6fblbe9',
         'template_q58wl3k',
@@ -63,7 +70,7 @@ export default function Home() {
         .then((result) => {
           console.log('Email sent!', result.text);
           setSubmitStatus('success');
-          form.current.reset();
+          form.current?.reset();
         })
         .catch((error) => {
           console.error('Error sending email:', error);
