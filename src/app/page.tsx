@@ -4,14 +4,24 @@ import { Button } from "@/components/ui/button"
 import { Header } from "@/components/header"
 import Link from "next/link"
 import Image from "next/image"
-import { FaGithub, FaLinkedin, FaReact, FaHtml5, FaCss3Alt, FaNodeJs, FaGit } from "react-icons/fa"
-import { SiNextdotjs, SiTypescript, SiJavascript, SiTailwindcss, SiPostgresql } from "react-icons/si";
+import { FaGithub, FaLinkedin, FaReact, FaHtml5, FaCss3Alt, FaNodeJs,
+  FaGit, FaVuejs, FaBootstrap, FaDocker } from "react-icons/fa"
+import { SiNextdotjs, SiTypescript, SiJavascript, SiTailwindcss, SiPostgresql, SiDotnet } from "react-icons/si";
+import { TbBrandCSharp } from "react-icons/tb";
 import { Mail, Phone, MapPin, ExternalLink, Send, MoveRight } from "lucide-react"
 import { Badge } from "@/components/ui/badge"
 import { ImageCarousel } from "@/components/ui/carousel"
-import { MapModal } from "@/components/ui/map-modal"
 import {useState, useRef, useEffect} from "react"
 import emailjs from '@emailjs/browser';
+
+// Import Swiper React components
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay, Pagination, Navigation } from 'swiper/modules';
+
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
 
 // Import data
 import projects from "./data/projects.json"
@@ -28,7 +38,13 @@ const iconComponents = {
   FaCss3Alt,
   FaNodeJs,
   SiPostgresql,
-  FaGit
+  FaGit,
+  FaVuejs,
+  FaBootstrap,
+  FaDocker,
+  FaGithub,
+  TbBrandCSharp,
+  SiDotnet
 };
 
 export default function Home() {
@@ -85,7 +101,7 @@ export default function Home() {
   return (
       <div className="flex min-h-screen flex-col">
         <Header />
-        <main className="grid grid-cols-1 md:grid-cols-4 min-h-screen">
+        <main className="grid grid-cols-1 md:grid-cols-4 min-h-screen px-8 md:px-16 lg:px-25">
           <div className="min-h-screen flex flex-col items-center p-6">
             <div className="rounded-full w-66 h-66 mt-12 mb-10">
               <Image
@@ -144,7 +160,7 @@ export default function Home() {
             {/*/>*/}
           </div>
 
-          <div className="col-span-3 px-8 md:px-16 lg:px-20">
+          <div className="col-span-3 md:ps-20">
             {/* About section */}
             <section className="container items-center mt-12 gap-6 pt-6 md:pt-10">
               <div className="flex max-w-[980px] flex-col items-start gap-4">
@@ -205,18 +221,58 @@ export default function Home() {
                   {projects.length > 4 && (
                       <a className={"flex items-center hover:underline cursor-pointer"}>
                         See all
-                        <MoveRight size={15} className={"ms-2"}/>
+                        <MoveRight size={15} className={"ms-2"} />
                       </a>
                   )}
                 </div>
                 <div className="grid gap-10 md:grid-cols-2">
                   {projects.map((project) => (
                       <div key={project.id} className="rounded-lg border bg-card p-6 shadow-sm">
-                        {/* Image Carousel */}
-                        <ImageCarousel
-                            images={project.images}
-                            alt={project.title}
-                        />
+                        <style>
+                          {`
+                          .swiper-pagination-bullet {
+                            opacity: 0.5;
+                            width: 12px;
+                            height: 12px;
+                            background-color: var(--primary);
+                          }
+                          .swiper-pagination-bullet-active {
+                            opacity: 1;
+                            background-color: var(--primary);
+                          }
+                          .swiper-pagination {
+                            bottom: 20px !important;
+                          }
+                        `}
+                        </style>
+                        <Swiper
+                            spaceBetween={30}
+                            centeredSlides={true}
+                            autoplay={{
+                              delay: 3500,
+                              disableOnInteraction: false,
+                            }}
+                            loop={true}
+                            pagination={{
+                              clickable: true,
+                              dynamicBullets: true,
+                            }}
+                            modules={[Autoplay, Pagination]}
+                            className="w-full h-[280px] rounded poster-swiper"
+                        >
+                          {project.images.map((img, index) => (
+                              <SwiperSlide key={index}>
+                                <div
+                                    className="w-full h-full bg-cover bg-center rounded"
+                                    style={{
+                                      backgroundImage: `url(${img})`,
+                                      backgroundSize: 'cover',
+                                      backgroundPosition: 'center',
+                                    }}
+                                />
+                              </SwiperSlide>
+                          ))}
+                        </Swiper>
 
                         <h3 className="mb-2 mt-4 text-xl font-semibold">{project.title}</h3>
                         <p className="mb-4 text-muted-foreground">{project.description}</p>
@@ -242,6 +298,7 @@ export default function Home() {
                 </div>
               </div>
             </section>
+
 
             {/* Technologies section */}
             <section className="py-30" id="technologies">

@@ -2,7 +2,7 @@
   {
     "id": 1,
     "title": "Nau Cosmetic",
-    "description": "A responsive dashboard for e-commerce analytics with real-time data visualization.",
+    "description": "A responsive e-commerce website for a cosmetic store, built in collaboration with backend developers to integrate RESTful APIs and ensure smooth deployment.",
     "images": [
       "/assets/project1/1.png",
       "/assets/project1/2.png",
@@ -17,7 +17,7 @@
   {
     "id": 2,
     "title": "BookaStay",
-    "description": "A full-stack blogging platform specialized for travel enthusiasts to share their experiences.",
+    "description": "A hotel booking platform with a user-friendly UI, optimized for responsiveness and enhanced with RESTful API integration.",
     "images": [
       "/assets/project2/1.png",
       "/assets/project2/2.png",
@@ -32,7 +32,7 @@
   {
     "id": 3,
     "title": "Task Management App",
-    "description": "A Kanban-style task management application with drag-and-drop functionality.",
+    "description": "A desktop application for managing a cosmetic store, featuring a user-friendly UI and full CRUD functionality integrated with PostgreSQL.",
     "images": [
       "/assets/project3/1.png",
       "/assets/project3/2.png",

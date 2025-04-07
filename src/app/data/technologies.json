@@ -8,6 +8,10 @@
     "icon": "SiNextdotjs"
   },
   {
+    "name": "Vue.js",
+    "icon": "FaVuejs"
+  },
+  {
     "name": "TypeScript",
     "icon": "SiTypescript"
   },
@@ -20,12 +24,20 @@
     "icon": "SiTailwindcss"
   },
   {
+    "name": "Bootstrap",
+    "icon": "FaBootstrap"
+  },
+  {
     "name": "HTML5",
     "icon": "FaHtml5"
   },
   {
     "name": "CSS3",
     "icon": "FaCss3Alt"
+  },
+  {
+    "name": "C#",
+    "icon": "TbBrandCSharp"
   },
   {
     "name": "Node.js",
@@ -38,5 +50,17 @@
   {
     "name": "Git",
     "icon": "FaGit"
+  },
+  {
+    "name": "GitHub",
+    "icon": "FaGithub"
+  },
+  {
+    "name": "Docker",
+    "icon": "FaDocker"
+  },
+  {
+    "name": "C#",
+    "icon": "SiDotnet"
   }
 ]
