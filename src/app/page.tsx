@@ -13,6 +13,8 @@ import { Badge } from "@/components/ui/badge"
 import { ImageCarousel } from "@/components/ui/carousel"
 import {useState, useRef, useEffect} from "react"
 import emailjs from '@emailjs/browser';
+import Icon from "../../public/assets/icon"
+import Icon2 from "../../public/assets/icon2"
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -101,9 +103,9 @@ export default function Home() {
   return (
       <div className="flex min-h-screen flex-col">
         <Header />
-        <main className="grid grid-cols-1 md:grid-cols-4 min-h-screen px-8 md:px-16 lg:px-25">
-          <div className="min-h-screen flex flex-col items-center p-6">
-            <div className="rounded-full w-66 h-66 mt-12 mb-10">
+        <main className="grid grid-cols-1 lg:grid-cols-4 min-h-screen px-8 md:px-16 lg:px-25">
+          <div className="border-x border-b h-210 flex flex-col items-center p-6 sticky">
+            <div className="rounded-full w-70 h-70 mt-12 mb-10">
               <Image
                   src="/assets/avatar.jpg"
                   alt="Profile picture"
@@ -144,44 +146,46 @@ export default function Home() {
               </Link>
             </div>
 
-            <Button asChild className="w-full mb-4">
+            <div className="mb-4">
               <Link href="#contact">Contact Me</Link>
-            </Button>
+            </div>Education
 
             <Button variant="outline" asChild className="w-40">
               <Link href="/assets/resume.pdf" target={"_blank"} download>My Resume</Link>
             </Button>
 
-            {/* Map Modal */}
-            {/*<MapModal*/}
-            {/*    isOpen={isMapOpen}*/}
-            {/*    onClose={() => setIsMapOpen(false)}*/}
-            {/*    address={address}*/}
-            {/*/>*/}
+
           </div>
 
           <div className="col-span-3 md:ps-20">
             {/* About section */}
             <section className="container items-center mt-12 gap-6 pt-6 md:pt-10">
-              <div className="flex max-w-[980px] flex-col items-start gap-4">
-                <h1 className="text-3xl md:text-5xl font-extrabold leading-tight tracking-tighter mb-3">
-                  Hello, I am <span className="text-primary text-5xl md:text-8xl">Thao Ngan</span>
-                </h1>
-                <p className="max-w-[780px] text-xl text-muted-foreground">
-                  I’m a third-year Software Engineering student at the University of Science - VNUHCM. I have a strong passion for Frontend Development and am currently expanding my knowledge of JavaScript frameworks like React, Vue.
-                </p>
-                <div className="flex gap-4 mt-4">
-                  <Button variant="outline" asChild>
-                    <Link href="/assets/resume.pdf" target={"_blank"} download>My Resume</Link>
-                  </Button>
+              <div className="flex max-w-[1120px] items-start justify-between gap-4">
+                <div>
+                  <h1 className="text-3xl md:text-5xl font-extrabold leading-tight tracking-tighter mb-3">
+                    Hello, I am <span className="text-primary text-5xl md:text-8xl">Thao Ngan</span>
+                  </h1>
+                  <p className="max-w-[780px] text-xl text-muted-foreground">
+                    I’m a third-year Software Engineering student at the University of Science - VNUHCM. I have a strong passion for Frontend Development and am currently expanding my knowledge of JavaScript frameworks like React, Vue.
+                  </p>
+                  <div className="flex gap-4 mt-4">
+                    <Button variant="outline" asChild>
+                      <Link href="/assets/resume.pdf" target={"_blank"} download>My Resume</Link>
+                    </Button>
+                  </div>
                 </div>
+                <Icon className="h-40 w-40 mt-10 hidden md:inline" />
               </div>
             </section>
 
             {/* Education section */}
             <section className="pt-30" id="education">
               <div className="container">
-                <h2 className="mb-8 border-b pb-2 text-3xl font-bold">Education</h2>
+                <div className={"mb-8 border-b pb-2 flex items-center"}>
+                  <Icon2 className={"h-6"} />
+                  <h2 className="ms-3 text-3xl font-bold">Education</h2>
+                </div>
+
                 <div className="space-y-8">
                   {education.map((edu) => (
                       <div key={edu.id} className="rounded-lg border bg-card p-6 shadow-sm">
@@ -217,7 +221,11 @@ export default function Home() {
             <section className="pt-30" id="projects">
               <div className="container">
                 <div className={"mb-8 pb-2 border-b flex items-center justify-between"}>
-                  <h2 className="text-3xl font-bold">My Projects</h2>
+                  <div className="flex items-center justify-between">
+                    <Icon2 className={"h-6"} />
+                    <h2 className="ms-3 text-3xl font-bold">My Projects</h2>
+                  </div>
+
                   {projects.length > 4 && (
                       <a className={"flex items-center hover:underline cursor-pointer"}>
                         See all
@@ -303,7 +311,10 @@ export default function Home() {
             {/* Technologies section */}
             <section className="py-30" id="technologies">
               <div className="container">
-                <h2 className="mb-8 text-3xl font-bold border-b pb-2">Technologies</h2>
+                <div className={"mb-8 border-b pb-2 flex items-center"}>
+                  <Icon2 className={"h-6"} />
+                  <h2 className="ms-3 text-3xl font-bold">Technologies</h2>
+                </div>
                 <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-5">
                   {technologies.map((tech, index) => {
                       // @ts-ignore
@@ -324,9 +335,12 @@ export default function Home() {
             </section>
 
             {/* Contact form section */}
-            <section className="py-12" id="contact">
+            <section className="py-12 mb-10" id="contact">
               <div className="container">
-                <h2 className="mb-8 text-3xl font-bold border-b pb-2">Contact Me</h2>
+                <div className={"mb-8 border-b pb-2 flex items-center"}>
+                  <Icon2 className={"h-6"} />
+                  <h2 className="ms-3 text-3xl font-bold">Contact Me</h2>
+                </div>
                 <div className="rounded-lg border bg-card p-6 shadow-sm">
                   {submitStatus === 'success' ? (
                       <div className="p-4 bg-green-50 text-green-700 rounded-md mb-4">
@@ -417,7 +431,7 @@ export default function Home() {
             </section>
           </div>
         </main>
-        <footer className="border-t py-6 mt-10 w-full">
+        <footer className="border-t py-6 w-full">
           <div className="container max-w-screen flex flex-col items-center justify-between gap-4 px-4 md:flex-row md:px-30">
             <p className="text-center text-sm text-muted-foreground">
               © 2025 Tran Thao Ngan. All rights reserved.
