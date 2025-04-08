@@ -3,6 +3,7 @@
 import { Button } from "@/components/ui/button"
 import { Header } from "@/components/header"
 import FadeInSection from "@/components/FadeInSection";
+import ScrollNavLink from "@/components/ScrollNavLink";
 import Link from "next/link"
 import Image from "next/image"
 import { FaGithub, FaLinkedin, FaReact, FaHtml5, FaCss3Alt, FaNodeJs,
@@ -11,14 +12,13 @@ import { SiNextdotjs, SiTypescript, SiJavascript, SiTailwindcss, SiPostgresql, S
 import { TbBrandCSharp } from "react-icons/tb";
 import { Mail, Phone, MapPin, ExternalLink, Send, MoveRight } from "lucide-react"
 import { Badge } from "@/components/ui/badge"
-import { ImageCarousel } from "@/components/ui/carousel"
 import {useState, useRef, useEffect} from "react"
 import emailjs from '@emailjs/browser';
 import Icon from "../../public/assets/icon"
 import Icon2 from "../../public/assets/icon2"
 import gsap from "gsap"
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-gsap.registerPlugin(ScrollTrigger);
+import { ScrollTrigger } from "gsap/ScrollTrigger"
+import { ScrollToPlugin } from "gsap/ScrollToPlugin"
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -74,6 +74,33 @@ export default function Home() {
   }, [submitStatus]);
 
   useEffect(() => {
+    // Register GSAP plugins
+    gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
+
+    // Animation for technologies section with staggered appearance
+    const techItems = document.querySelectorAll('#technologies .grid > div');
+    gsap.fromTo(techItems,
+        {
+          y: 50,
+          opacity: 0
+        },
+        {
+          scrollTrigger: {
+            trigger: '#technologies',
+            start: "top bottom-=100",
+            end: "center center",
+            toggleActions: "play none none reverse",
+            // toggleActions format: onEnter onLeave onEnterBack onLeaveBack
+            scrub: false
+          },
+          y: 0,
+          opacity: 1,
+          stagger: 0.1,
+          duration: 0.5,
+          ease: "power2.out"
+        }
+    );
+
     if (boxRef.current) {
       gsap.to(
           boxRef.current,
@@ -85,7 +112,14 @@ export default function Home() {
           }
       );
     }
+
+    return () => {
+      // Clean up ScrollTrigger instances
+      ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+    };
   }, []);
+
+
 
   const handleSubmit = (event: { preventDefault: () => void }) => {
     event.preventDefault();
@@ -184,7 +218,7 @@ export default function Home() {
           <div className="col-span-3 lg:ps-20">
             {/* About section */}
             <FadeInSection>
-              <section className="container items-center mt-12 gap-6 pt-6 md:pt-10">
+              <section id={"about"} className="container items-center gap-6 pt-14 md:pt-20">
                 <div className="flex max-w-[1120px] items-start justify-between gap-4">
                   <div>
                     <div className="text-4xl md:text-5xl font-extrabold leading-tight tracking-tighter mb-3 flex flex-col lg:flex-none">
@@ -202,19 +236,21 @@ export default function Home() {
                   <div>
                     <Icon ref={boxRef} className="h-40 w-40 mt-10 hidden md:inline" />
                   </div>
-
                 </div>
               </section>
             </FadeInSection>
 
             {/* Education section */}
             <FadeInSection>
-              <section className="pt-30" id="education">
+              <section className="mt-15 pt-15" id="education">
                 <div className="container">
-                  <div className={"mb-8 border-b pb-2 flex items-center"}>
+                  <div className={"mb-2 pb-2 flex items-center"}>
                     <Icon2 className={"h-6"} />
                     <h2 className="ms-3 text-3xl font-bold">Education</h2>
                   </div>
+                  <ScrollNavLink>
+                    <div className="border mb-8"></div>
+                  </ScrollNavLink>
 
                   <div className="space-y-8">
                     {education.map((edu) => (
@@ -250,9 +286,9 @@ export default function Home() {
 
             {/* Projects section */}
             <FadeInSection>
-              <section className="pt-30" id="projects">
+              <section className="mt-15 pt-15" id="projects">
                 <div className="container">
-                  <div className={"mb-8 pb-2 border-b flex items-center justify-between"}>
+                  <div className={"mb-2 pb-2 flex items-center justify-between"}>
                     <div className="flex items-center justify-between">
                       <Icon2 className={"h-6"} />
                       <h2 className="ms-3 text-3xl font-bold">My Projects</h2>
@@ -265,6 +301,9 @@ export default function Home() {
                         </a>
                     )}
                   </div>
+                  <ScrollNavLink>
+                    <div className="border mb-8"></div>
+                  </ScrollNavLink>
                   <div className="grid gap-10 grid-cols-1 lg:grid-cols-2">
                     {projects.map((project) => (
                         <div key={project.id} className="rounded-lg border bg-card hover:bg-[var(--sidebar-border)] p-6">
@@ -342,12 +381,16 @@ export default function Home() {
 
             {/* Technologies section */}
             <FadeInSection>
-              <section className="py-30" id="technologies">
+              <section className="mt-15 pt-15" id="technologies">
                 <div className="container">
-                  <div className={"mb-8 border-b pb-2 flex items-center"}>
+                  <div className={"mb-2 pb-2 flex items-center"}>
                     <Icon2 className={"h-6"} />
                     <h2 className="ms-3 text-3xl font-bold">Technologies</h2>
                   </div>
+                  <ScrollNavLink>
+                    <div className="border mb-8"></div>
+                  </ScrollNavLink>
+
                   <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-5">
                     {technologies.map((tech, index) => {
                         // @ts-ignore
@@ -370,12 +413,16 @@ export default function Home() {
 
             {/* Contact form section */}
             <FadeInSection>
-              <section className="py-12 mb-10" id="contact">
+              <section className="mt-15 pt-15 mb-10" id="contact">
                 <div className="container">
-                  <div className={"mb-8 border-b pb-2 flex items-center"}>
+                  <div className={"mb-2 pb-2 flex items-center"}>
                     <Icon2 className={"h-6"} />
                     <h2 className="ms-3 text-3xl font-bold">Contact Me</h2>
                   </div>
+                  <ScrollNavLink>
+                    <div className="border mb-8"></div>
+                  </ScrollNavLink>
+
                   <div className="rounded-lg border bg-card p-6 shadow-sm">
                     {submitStatus === 'success' ? (
                         <div className="p-4 bg-green-50 text-green-700 rounded-md mb-4">
