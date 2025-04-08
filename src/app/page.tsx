@@ -111,11 +111,12 @@ export default function Home() {
                   alt="Profile picture"
                   width={350}
                   height={350}
-                  className="w-full h-full object-cover rounded-full outline-4 outline-gray-200"
+                  className="w-full h-full object-cover rounded-full outline-4 out"
+                  style={{ outlineColor: "var(--foreground)"}}
               />
             </div>
 
-            <h2 className="text-4xl font-bold mb-3">Tran Thao Ngan</h2>
+            <h2 className="text-4xl font-bold text-center mb-3">Tran Thao Ngan</h2>
             <p className="text-xl mb-6 border-b">Frontend Developer</p>
 
             <div className="mb-2 text-center flex items-center">
@@ -148,7 +149,7 @@ export default function Home() {
 
             <div className="mb-4">
               <Link href="#contact">Contact Me</Link>
-            </div>Education
+            </div>
 
             <Button variant="outline" asChild className="w-40">
               <Link href="/assets/resume.pdf" target={"_blank"} download>My Resume</Link>
@@ -157,14 +158,14 @@ export default function Home() {
 
           </div>
 
-          <div className="col-span-3 md:ps-20">
+          <div className="col-span-3 lg:ps-20">
             {/* About section */}
             <section className="container items-center mt-12 gap-6 pt-6 md:pt-10">
               <div className="flex max-w-[1120px] items-start justify-between gap-4">
                 <div>
-                  <h1 className="text-3xl md:text-5xl font-extrabold leading-tight tracking-tighter mb-3">
-                    Hello, I am <span className="text-primary text-5xl md:text-8xl">Thao Ngan</span>
-                  </h1>
+                  <div className="text-4xl md:text-5xl font-extrabold leading-tight tracking-tighter mb-3 flex flex-col lg:flex-none">
+                    Hello, I am <span className="text-primary text-6xl md:text-8xl">Thao Ngan</span>
+                  </div>
                   <p className="max-w-[780px] text-xl text-muted-foreground">
                     I’m a third-year Software Engineering student at the University of Science - VNUHCM. I have a strong passion for Frontend Development and am currently expanding my knowledge of JavaScript frameworks like React, Vue.
                   </p>
