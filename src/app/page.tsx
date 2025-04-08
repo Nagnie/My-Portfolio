@@ -61,7 +61,7 @@ export default function Home() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'success' | 'error' | null>(null);
 
-  const boxRef = useRef<HTMLDivElement>(null);
+  const boxRef = useRef<SVGSVGElement>(null);
 
   useEffect(() => {
     if (submitStatus) {
