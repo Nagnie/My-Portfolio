@@ -10,7 +10,7 @@
       "/assets/project1/4.png",
       "/assets/project1/5.png"
     ],
-    "technologies": ["React", "Nest.js", "PostgreSQL", "Tailwind CSS", "Redux", "Docker"],
+    "technologies": ["React", "Nest.js", "PostgreSQL", "Tailwind CSS", "Redis", "Docker"],
     "githubUrl": "https://github.com/Nagnie/Cosmetic_Web_Store",
     "liveUrl": "https://naucosmetic.com"
   },
