@@ -1,0 +1,48 @@
+[
+  {
+    "id": 1,
+    "title": "Nâu Cosmetic",
+    "description": "Một trang web thương mại điện tử đáp ứng cho cửa hàng mỹ phẩm, được xây dựng phối hợp với backend để tích hợp API RESTful và đảm bảo quá trình triển khai mượt mà.",
+    "images": [
+      "/assets/project1/1.png",
+      "/assets/project1/2.png",
+      "/assets/project1/3.png",
+      "/assets/project1/4.png",
+      "/assets/project1/5.png"
+    ],
+    "technologies": ["React", "Nest.js", "PostgreSQL", "Tailwind CSS", "Redis", "Docker"],
+    "githubUrl": "https://github.com/Nagnie/Cosmetic_Web_Store",
+    "liveUrl": "https://naucosmetic.com"
+  },
+  {
+    "id": 2,
+    "title": "BookaStay",
+    "description": "Nền tảng đặt phòng khách sạn với giao diện thân thiện người dùng, tối ưu hiển thị và tích hợp API RESTful hiệu quả.",
+    "images": [
+      "/assets/project2/1.png",
+      "/assets/project2/2.png",
+      "/assets/project2/3.png",
+      "/assets/project2/4.png",
+      "/assets/project2/5.png"
+    ],
+    "technologies": ["React", "Nest.js", "PostgreSQL", "Bootstrap", "Docker"],
+    "githubUrl": "https://github.com/luricisme/Website_BookingHotel",
+    "liveUrl": "https://youtu.be/KmXjdy_OqfI"
+  },
+  {
+    "id": 3,
+    "title": "Ứng dụng Quản lý Công việc",
+    "description": "Ứng dụng desktop để quản lý cửa hàng mỹ phẩm, với giao diện dễ sử dụng và đầy đủ chức năng CRUD tích hợp với PostgreSQL.",
+    "images": [
+      "/assets/project3/1.png",
+      "/assets/project3/2.png",
+      "/assets/project3/2.png",
+      "/assets/project3/3.png",
+      "/assets/project3/4.png",
+      "/assets/project3/5.png"
+    ],
+    "technologies": ["WinUI", ".NET", "C#", "PostgreSQL"],
+    "githubUrl": "https://github.com/Nagnie/Cosmetic-Store-Management-System",
+    "liveUrl": "https://youtu.be/dsEfMf8Z9uw?si=DaK5Z_9XYVfovWOx"
+  }
+]

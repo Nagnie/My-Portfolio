@@ -1,0 +1,90 @@
+{
+  "en": {
+    "navigation": {
+      "about": "About",
+      "education": "Education",
+      "projects": "Projects",
+      "technologies": "Technologies",
+      "contact": "Contact"
+    },
+    "header": {
+      "portfolio": "Ngan's Portfolio"
+    },
+    "info": {
+      "name": "Tran Thao Ngan",
+      "role": "Frontend Developer",
+      "address": "Ho Chi Minh City, Vietnam",
+      "button1": "Contact me",
+      "button2": "My Resume"
+    },
+    "about": {
+      "intro": "Hello, I am",
+      "name": "Thao Ngan",
+      "description": "I’m a third-year Software Engineering student at the University of Science - VNUHCM. I have a strong passion for Frontend Development and am currently expanding my knowledge of JavaScript frameworks like React, Vue."
+    },
+    "education": {
+      "title": "Education"
+    },
+    "projects": {
+      "title": "Projects"
+    },
+    "technologies": {
+      "title": "Technologies"
+    },
+    "contact": {
+      "title": "Contact Me",
+      "email": "Your email",
+      "name": "Your name",
+      "subject": "Subject",
+      "message": "Message",
+      "send": "Send Message",
+      "sending": "Sending",
+      "success": "Your message has been sent successfully! I'll get back to you soon.",
+      "error": "There was an error sending your message. Please try again or email me directly."
+    }
+  },
+  "vi": {
+    "navigation": {
+      "about": "Giới thiệu",
+      "education": "Học vấn",
+      "projects": "Dự án",
+      "technologies": "Công nghệ",
+      "contact": "Liên hệ"
+    },
+    "header": {
+      "portfolio": "Portfolio của Ngân"
+    },
+    "info": {
+      "name": "Trần Thảo Ngân",
+      "role": "Lập trình viên Frontend",
+      "address": "Thành phố Hồ Chí Minh, Việt Nam",
+      "button1": "Liên hệ với tôi",
+      "button2": "CV của tôi"
+    },
+    "about": {
+      "intro": "Xin chào, mình là",
+      "name": "Thảo Ngân",
+      "description": "Mình là sinh viên năm ba ngành Kỹ thuật Phần mềm tại Trường Đại học Khoa học Tự nhiên - ĐHQG TP.HCM. Mình có niềm đam mê lớn với phát triển Frontend và hiện đang mở rộng kiến thức về các framework JavaScript như React, Vue."
+    },
+    "education": {
+      "title": "Học vấn"
+    },
+    "projects": {
+      "title": "Dự án"
+    },
+    "technologies": {
+      "title": "Công nghệ"
+    },
+    "contact": {
+      "title": "Liên hệ với tôi",
+      "name": "Tên của bạn",
+      "subject": "Chủ đề",
+      "email": "Email của bạn",
+      "message": "Tin nhắn",
+      "send": "Gửi tin nhắn",
+      "sending": "Đang gửi",
+      "success": "Tin nhắn của bạn đã được gửi thành công! Mình sẽ liên hệ lại với bạn sớm.",
+      "error": "Đã xảy ra lỗi khi gửi tin nhắn. Vui lòng thử lại hoặc gửi email trực tiếp cho mình."
+    }
+  }
+}

@@ -1,0 +1,24 @@
+[
+  {
+    "id": 1,
+    "degree": "Kỹ thuật Phần mềm",
+    "institution": "Trường Đại học Khoa học Tự nhiên, ĐHQG-HCM",
+    "location": "Thành phố Hồ Chí Minh, Việt Nam",
+    "period": "2022 - 2026 (Dự kiến)",
+    "description": "GPA: 3.62/4.0",
+    "coursework": [
+      "Lập trình Hướng đối tượng",
+      "Cấu trúc Dữ liệu và Giải thuật",
+      "Lập trình Windows",
+      "Phát triển Ứng dụng Web",
+      "Cơ sở Dữ liệu",
+      "Hệ điều hành",
+      "Hệ thống Máy tính",
+      "Kỹ thuật Phần mềm",
+      "Mạng Máy tính",
+      "Nhập môn Trí tuệ Nhân tạo",
+      "Hệ thống Máy tính",
+      "Nhập môn DevOps"
+    ]
+  }
+]

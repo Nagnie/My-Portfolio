@@ -19,10 +19,10 @@ export function ThemeToggle() {
         <DropdownMenu>
             <DropdownMenuTrigger asChild>
                 <Button variant="outline" size="icon" className={"cursor-pointer"}>
-                    <Sparkles className="h-[1.2rem] w-[1.2rem]" />
+                    <Sparkles className="h-5 w-5" />
                 </Button>
             </DropdownMenuTrigger>
-            <DropdownMenuContent align="end" className={"dropdown-content"} style={{ backgroundColor: "var(--background)" }}>
+            <DropdownMenuContent align="end" className={"mt-1"} style={{ backgroundColor: "var(--background)" }}>
                 <DropdownMenuItem onClick={() => setTheme("light")} className={"hover:font-semibold cursor-pointer"}>
                     Light
                 </DropdownMenuItem>

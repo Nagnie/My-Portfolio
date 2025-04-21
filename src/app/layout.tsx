@@ -5,6 +5,8 @@ import "./globals.css"
 import { ThemeProvider } from "next-themes"
 import React from "react";
 import Logo from "../../public/assets/logo"
+import { LanguageProvider } from "@/components/language-context"
+import translations from "../app/data/translations.json"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -20,7 +22,11 @@ export default function RootLayout({
     return (
         <html lang="vi" suppressHydrationWarning>
         <body className={inter.className}>
-            <ThemeProvider>{children}</ThemeProvider>
+            <ThemeProvider>
+                <LanguageProvider translations={translations} initialLanguage="en">
+                    {children}
+                </LanguageProvider>
+            </ThemeProvider>
         </body>
         </html>
     )

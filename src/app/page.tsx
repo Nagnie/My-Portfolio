@@ -19,6 +19,9 @@ import Icon2 from "../../public/assets/icon2"
 import gsap from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { ScrollToPlugin } from "gsap/ScrollToPlugin"
+import { useLanguage } from "@/components/language-context";
+import EducationSection from "@/components/EducationSection";
+import ProjectSection from "@/components/ProjectsSection";
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -30,9 +33,10 @@ import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 
 // Import data
-import projects from "./data/projects.json"
+import projects from "./data/projects_en.json"
 import technologies from "./data/technologies.json"
-import education from "./data/education.json"
+import education from "./data/education_en.json"
+import translations from "../app/data/translations.json"
 
 const iconComponents = {
   FaReact,
@@ -153,6 +157,7 @@ export default function Home() {
         });
   };
 
+  const { t } = useLanguage();
 
   return (
       <div className="flex min-h-screen flex-col">
@@ -171,8 +176,8 @@ export default function Home() {
                 />
               </div>
 
-              <h2 className="text-4xl font-bold text-center mb-3">Tran Thao Ngan</h2>
-              <p className="text-xl mb-6 border-b">Frontend Developer</p>
+              <h2 className="text-4xl font-bold text-center mb-3">{t("name", "info")}</h2>
+              <p className="text-xl mb-6 border-b">{t("role", "info")}</p>
 
               <div className="mb-2 text-center flex items-center">
                 <Mail className="h-5 w-5" />
@@ -190,7 +195,7 @@ export default function Home() {
 
               <div className="mb-6 text-center flex items-center" onClick={() => setIsMapOpen(true)}>
                 <MapPin className="h-5 w-5" />
-                <p className="ms-2">Thu Duc, Ho Chi Minh City, Vietnam</p>
+                <p className="ms-2">{t("address", "info")}</p>
               </div>
 
               <div className="flex gap-5 mb-6">
@@ -203,14 +208,14 @@ export default function Home() {
               </div>
 
               <div className="mb-4">
-                <Link href="#contact">Contact Me</Link>
+                <Link href="#contact">{t("button1", "info")}</Link>
               </div>
 
               <Button
                   variant="outline"
                   asChild
                   className="hover:bg-[var(--sidebar-border)] px-5">
-                <Link href="/assets/resume.pdf" target={"_blank"} download>My Resume</Link>
+                <Link href="/assets/resume.pdf" target={"_blank"} download>{t("button2", "info")}</Link>
               </Button>
             </div>
           </FadeInSection>
@@ -221,15 +226,15 @@ export default function Home() {
               <section id={"about"} className="container items-center gap-6 pt-14 md:pt-20">
                 <div className="flex max-w-[1120px] items-start justify-between gap-4">
                   <div>
-                    <div className="text-4xl md:text-5xl font-extrabold leading-tight tracking-tighter mb-3 flex flex-col lg:flex-none">
-                      Hello, I am <span className="text-primary text-6xl md:text-8xl">Thao Ngan</span>
+                    <div className="text-4xl md:text-5xl font-extrabold leading-tight tracking-tighter mb-8 flex flex-col lg:flex-none">
+                      {t("intro", "about")} <span className="text-primary text-6xl md:text-8xl">{t("name", "about")}</span>
                     </div>
                     <p className="max-w-[780px] text-xl text-muted-foreground">
-                      I’m a third-year Software Engineering student at the University of Science - VNUHCM. I have a strong passion for Frontend Development and am currently expanding my knowledge of JavaScript frameworks like React, Vue.
+                      {t("description", "about")}
                     </p>
-                    <div className="flex gap-4 mt-4">
+                    <div className="flex gap-4 mt-8">
                       <Button variant="outline" className="hover:bg-[var(--sidebar-border)] px-5" asChild>
-                        <Link href="/assets/resume.pdf" target={"_blank"} download>My Resume</Link>
+                        <Link href="/assets/resume.pdf" target={"_blank"} download>{t("button2", "info")}</Link>
                       </Button>
                     </div>
                   </div>
@@ -246,40 +251,13 @@ export default function Home() {
                 <div className="container">
                   <div className={"mb-2 pb-2 flex items-center"}>
                     <Icon2 className={"h-6"} />
-                    <h2 className="ms-3 text-3xl font-bold">Education</h2>
+                    <h2 className="ms-3 text-3xl font-bold">{t("title", "education")}</h2>
                   </div>
                   <ScrollNavLink>
                     <div className="border mb-8"></div>
                   </ScrollNavLink>
 
-                  <div className="space-y-8">
-                    {education.map((edu) => (
-                        <div key={edu.id} className="rounded-lg border bg-card p-6 shadow-sm">
-                          <div className={"flex items-center justify-between"}>
-                            <h3 className="text-xl font-semibold">{edu.degree}</h3>
-                            <p className={"font-bold"}>{edu.period}</p>
-                          </div>
-
-                          <div className="mt-1 flex items-center">
-                            <p className="font-medium">{edu.institution}</p>
-                            <span className="mx-2">•</span>
-                            <p className="text-sm">{edu.location}</p>
-                          </div>
-
-                          <p className="mt-4">{edu.description}</p>
-
-                          {/* Coursework Section */}
-                          <div className="mt-4">
-                            <h4 className="mb-2 font-medium">Coursework:</h4>
-                            <div className="flex flex-wrap gap-3">
-                              {edu.coursework.map((course, idx) => (
-                                  <Badge key={idx} variant="outline">{course}</Badge>
-                              ))}
-                            </div>
-                          </div>
-                        </div>
-                    ))}
-                  </div>
+                  <EducationSection />
                 </div>
               </section>
             </FadeInSection>
@@ -291,7 +269,7 @@ export default function Home() {
                   <div className={"mb-2 pb-2 flex items-center justify-between"}>
                     <div className="flex items-center justify-between">
                       <Icon2 className={"h-6"} />
-                      <h2 className="ms-3 text-3xl font-bold">My Projects</h2>
+                      <h2 className="ms-3 text-3xl font-bold">{t("title", "projects")}</h2>
                     </div>
 
                     {projects.length > 4 && (
@@ -304,77 +282,7 @@ export default function Home() {
                   <ScrollNavLink>
                     <div className="border mb-8"></div>
                   </ScrollNavLink>
-                  <div className="grid gap-10 grid-cols-1 lg:grid-cols-2">
-                    {projects.map((project) => (
-                        <div key={project.id} className="rounded-lg border bg-card hover:bg-[var(--sidebar-border)] p-6">
-                          <style>
-                            {`
-                            .swiper-pagination-bullet {
-                              opacity: 0.5;
-                              width: 12px;
-                              height: 12px;
-                              background-color: var(--primary);
-                            }
-                            .swiper-pagination-bullet-active {
-                              opacity: 1;
-                              background-color: var(--primary);
-                            }
-                            .swiper-pagination {
-                              bottom: 20px !important;
-                            }
-                          `}
-                          </style>
-                          <Swiper
-                              spaceBetween={30}
-                              centeredSlides={true}
-                              autoplay={{
-                                delay: 3500,
-                                disableOnInteraction: false,
-                              }}
-                              loop={true}
-                              pagination={{
-                                clickable: true,
-                                dynamicBullets: true,
-                              }}
-                              modules={[Autoplay, Pagination]}
-                              className="relative h-80 w-full overflow-hidden"
-                          >
-                            {project.images.map((img, index) => (
-                                <SwiperSlide key={index}>
-                                  <div
-                                      className="w-full h-full bg-cover bg-center rounded"
-                                      style={{
-                                        backgroundImage: `url(${img})`,
-                                        backgroundSize: 'cover',
-                                        backgroundPosition: 'center',
-                                      }}
-                                  />
-                                </SwiperSlide>
-                            ))}
-                          </Swiper>
-
-                          <h3 className="mb-2 mt-4 text-xl font-semibold">{project.title}</h3>
-                          <p className="mb-4 text-muted-foreground">{project.description}</p>
-                          <div className="mb-4 flex flex-wrap gap-2">
-                            {project.technologies.map((tech, index) => (
-                                <Badge key={index} variant="outline">{tech}</Badge>
-                            ))}
-                          </div>
-                          <div className="flex gap-3">
-                            <Button variant="outline" size="sm" asChild>
-                              <Link href={project.githubUrl} target={"_blank"}>
-                                <FaGithub className="mr-2" /> Code
-                              </Link>
-                            </Button>
-                            <Button size="sm" asChild>
-                              <Link href={project.liveUrl} target={"_blank"}>
-                                <ExternalLink className="mr-2 h-4 w-4" /> Live Demo
-                              </Link>
-                            </Button>
-                          </div>
-                        </div>
-                    ))}
-                  </div>
+                  <ProjectSection />
                 </div>
               </section>
             </FadeInSection>
@@ -385,7 +293,7 @@ export default function Home() {
                 <div className="container">
                   <div className={"mb-2 pb-2 flex items-center"}>
                     <Icon2 className={"h-6"} />
-                    <h2 className="ms-3 text-3xl font-bold">Technologies</h2>
+                    <h2 className="ms-3 text-3xl font-bold">{t("title", "technologies")}</h2>
                   </div>
                   <ScrollNavLink>
                     <div className="border mb-8"></div>
@@ -413,11 +321,11 @@ export default function Home() {
 
             {/* Contact form section */}
             <FadeInSection>
-              <section className="mt-15 pt-15 mb-10" id="contact">
+              <section className="mt-15 pt-15 mb-25" id="contact">
                 <div className="container">
                   <div className={"mb-2 pb-2 flex items-center"}>
                     <Icon2 className={"h-6"} />
-                    <h2 className="ms-3 text-3xl font-bold">Contact Me</h2>
+                    <h2 className="ms-3 text-3xl font-bold">{t("title", "contact")}</h2>
                   </div>
                   <ScrollNavLink>
                     <div className="border mb-8"></div>
@@ -426,11 +334,11 @@ export default function Home() {
                   <div className="rounded-lg border bg-card p-6 shadow-sm">
                     {submitStatus === 'success' ? (
                         <div className="p-4 bg-green-50 text-green-700 rounded-md mb-4">
-                          Your message has been sent successfully! I'll get back to you soon.
+                          {t("success", "contact")}
                         </div>
                     ) : submitStatus === 'error' ? (
                         <div className="p-4 bg-red-50 text-red-700 rounded-md mb-4">
-                          There was an error sending your message. Please try again or email me directly.
+                          {t("error", "contact")}
                         </div>
                     ) : null}
 
@@ -438,7 +346,7 @@ export default function Home() {
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                         <div className="space-y-2">
                           <label htmlFor="name" className="font-medium">
-                            Name
+                            {t("name", "contact")}
                           </label>
                           <input
                               id="name"
@@ -450,7 +358,7 @@ export default function Home() {
                         </div>
                         <div className="space-y-2">
                           <label htmlFor="email" className="font-medium">
-                            Email
+                            {t("email", "contact")}
                           </label>
                           <input
                               id="email"
@@ -464,7 +372,7 @@ export default function Home() {
                       </div>
                       <div className="space-y-2">
                         <label htmlFor="subject" className="font-medium">
-                          Subject
+                          {t("subject", "contact")}
                         </label>
                         <input
                             id="subject"
@@ -476,7 +384,7 @@ export default function Home() {
                       </div>
                       <div className="space-y-2">
                         <label htmlFor="message" className="font-medium">
-                          Message
+                          {t("message", "contact")}
                         </label>
                         <textarea
                             id="message"
@@ -494,7 +402,7 @@ export default function Home() {
                       >
                         {isSubmitting ? (
                             <>
-                              <span className={"ms-2 me-1"}>Sending</span>
+                              <span className={"ms-2 me-1"}>{t("sending", "contact")}</span>
                               <svg className="animate-spin mx-1 h-4 w-4 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
                                 <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
                                 <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
@@ -502,7 +410,7 @@ export default function Home() {
                             </>
                         ) : (
                             <>
-                              <span className="ms-2 me-1">Send Message</span>
+                              <span className="ms-2 me-1">{t("send", "contact")}</span>
                               <Send className="mx-1" size={18} />
                             </>
                         )}
