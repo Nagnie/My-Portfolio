@@ -7,9 +7,11 @@ import ScrollNavLink from "@/components/ScrollNavLink";
 import Link from "next/link"
 import Image from "next/image"
 import { FaGithub, FaLinkedin, FaReact, FaHtml5, FaCss3Alt, FaNodeJs,
-  FaGit, FaVuejs, FaBootstrap, FaDocker } from "react-icons/fa"
-import { SiNextdotjs, SiTypescript, SiJavascript, SiTailwindcss, SiPostgresql, SiDotnet } from "react-icons/si";
+  FaGit, FaVuejs, FaBootstrap, FaDocker, FaLinux, FaJenkins, FaJira, FaTrello } from "react-icons/fa"
+import { SiNextdotjs, SiTypescript, SiJavascript, SiTailwindcss, SiPostgresql, SiDotnet,
+  SiKubernetes, SiPrometheus, SiGrafana, SiRedux, SiShadcnui } from "react-icons/si";
 import { TbBrandCSharp } from "react-icons/tb";
+import { DiMsqlServer } from "react-icons/di";
 import { Mail, Phone, MapPin, ExternalLink, Send, MoveRight } from "lucide-react"
 import { Badge } from "@/components/ui/badge"
 import {useState, useRef, useEffect} from "react"
@@ -54,7 +56,17 @@ const iconComponents = {
   FaDocker,
   FaGithub,
   TbBrandCSharp,
-  SiDotnet
+  SiDotnet,
+  DiMsqlServer,
+  FaJenkins,
+  FaLinux,
+  SiKubernetes,
+  SiPrometheus,
+  SiGrafana,
+  SiRedux,
+  SiShadcnui,
+  FaJira,
+  FaTrello
 };
 
 export default function Home() {
@@ -310,7 +322,7 @@ export default function Home() {
                                   {IconComponent ? <IconComponent size={40}/> : null}
                                 </div>
                               </div>
-                              <h3 className="text-lg font-medium">{tech.name}</h3>
+                              <h3 className="text-lg text-center font-medium">{tech.name}</h3>
                             </div>
                         );
                     })}

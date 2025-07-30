@@ -62,5 +62,41 @@
   {
     "name": "C#",
     "icon": "SiDotnet"
+  },
+  {
+    "name": "Linux",
+    "icon": "FaLinux"
+  },
+  {
+    "name": "Jenkins",
+    "icon": "FaJenkins"
+  },
+  {
+    "name": "Kubernetes",
+    "icon": "SiKubernetes"
+  },
+  {
+    "name": "Prometheus",
+    "icon": "SiPrometheus"
+  },
+  {
+    "name": "Grafana",
+    "icon": "SiGrafana"
+  },
+  {
+    "name": "Redux",
+    "icon": "SiRedux"
+  },
+  {
+    "name": "Shadcn/UI",
+    "icon": "SiShadcnui"
+  },
+  {
+    "name": "Jira",
+    "icon": "FaJira"
+  },
+  {
+    "name": "Trello",
+    "icon": "FaTrello"
   }
 ]
