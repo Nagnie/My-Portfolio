@@ -6,7 +6,8 @@ import "@/app/globals.css";
 
 import { ExternalLink } from "lucide-react";
 import Link from "next/link";
-import React from "react";
+import { useRouter } from "next/navigation";
+import { useState } from "react";
 import { FaGithub } from "react-icons/fa";
 import { Autoplay, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -14,25 +15,56 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import projectEn from "@/app/data/projects_en.json";
 import projectVi from "@/app/data/projects_vi.json";
 import translations from "@/app/data/translations.json";
+import { Header } from "@/components/header";
 import { useLanguage } from "@/components/language-context";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 
-export default function ProjectSection() {
+export default function ProjectsPage() {
   const { language } = useLanguage();
   const projectData = language === "vi" ? projectVi : projectEn;
   const t = translations[language as keyof typeof translations];
+  const router = useRouter();
 
-  // Show only the 4 most recent projects (first 4 items)
-  const recentProjects = projectData.slice(0, 4);
+  const [sortOrder, setSortOrder] = useState<"newest" | "oldest">("newest");
+
+  // Sort projects by date
+  const sortedProjects = [...projectData].sort((a: any, b: any) => {
+    if (sortOrder === "newest") {
+      return b.date.localeCompare(a.date);
+    } else {
+      return a.date.localeCompare(b.date);
+    }
+  });
 
   return (
-    <div className='space-y-8'>
+    <div className='min-h-screen container mx-auto px-4 py-20'>
+      <Header />
+      <div className='mb-8'>
+        <h1 className='text-4xl font-bold mb-4'>{t.projects.allProjects}</h1>
+        <div className='flex gap-4 items-center'>
+          <span className='text-muted-foreground'>{t.projects.filterBy}:</span>
+          <Button
+            variant={sortOrder === "newest" ? "default" : "outline"}
+            onClick={() => setSortOrder("newest")}
+          >
+            {t.projects.newest}
+          </Button>
+          <Button
+            variant={sortOrder === "oldest" ? "default" : "outline"}
+            onClick={() => setSortOrder("oldest")}
+          >
+            {t.projects.oldest}
+          </Button>
+        </div>
+      </div>
+
       <div className='grid gap-10 grid-cols-1 lg:grid-cols-2'>
-        {recentProjects.map((project: any) => (
+        {sortedProjects.map((project: any) => (
           <div
             key={project.id}
-            className='rounded-lg border bg-card hover:bg-[var(--sidebar-border)] p-6'
+            onClick={() => router.push(`/projects/${project.id}`)}
+            className='rounded-lg border bg-card hover:bg-[var(--sidebar-border)] p-6 transition-all cursor-pointer'
           >
             <style>
               {`
@@ -94,29 +126,43 @@ export default function ProjectSection() {
                 </Badge>
               ))}
             </div>
-            <div className='flex gap-3'>
+            <div className='flex gap-3' onClick={(e) => e.stopPropagation()}>
               <Button
                 variant='outline'
                 size='sm'
                 asChild
                 style={{ backgroundColor: "var(--background)" }}
               >
-                <Link href={project.githubUrl} target='_blank'>
+                <a
+                  href={project.githubUrl}
+                  target='_blank'
+                  rel='noopener noreferrer'
+                >
                   <FaGithub className='mr-2' /> Code
-                </Link>
+                </a>
               </Button>
               <Button
                 size='sm'
                 asChild
                 style={{ backgroundColor: "var(--background)" }}
               >
-                <Link href={project.liveUrl} target='_blank'>
+                <a
+                  href={project.liveUrl}
+                  target='_blank'
+                  rel='noopener noreferrer'
+                >
                   <ExternalLink className='mr-2 h-4 w-4' /> Demo
-                </Link>
+                </a>
               </Button>
             </div>
           </div>
         ))}
+      </div>
+
+      <div className='flex justify-center mt-12'>
+        <Button variant='outline' asChild>
+          <Link href='/#projects'>{t.projects.backToProjects}</Link>
+        </Button>
       </div>
     </div>
   );

@@ -26,7 +26,18 @@
       "title": "Education"
     },
     "projects": {
-      "title": "Projects"
+      "title": "Projects",
+      "seeAll": "See All Projects",
+      "allProjects": "All Projects",
+      "filterBy": "Filter by date",
+      "newest": "Newest First",
+      "oldest": "Oldest First",
+      "projectDetails": "Project Details",
+      "features": "Key Features",
+      "technologies": "Technologies Used",
+      "viewDemo": "View Demo",
+      "viewCode": "View Code",
+      "backToProjects": "Back to Projects"
     },
     "technologies": {
       "title": "Technologies"
@@ -70,7 +81,18 @@
       "title": "Học vấn"
     },
     "projects": {
-      "title": "Dự án"
+      "title": "Dự án",
+      "seeAll": "Xem tất cả Dự án",
+      "allProjects": "Tất cả Dự án",
+      "filterBy": "Lọc theo ngày",
+      "newest": "Mới nhất",
+      "oldest": "Cũ nhất",
+      "projectDetails": "Chi tiết Dự án",
+      "features": "Tính năng chính",
+      "technologies": "Công nghệ sử dụng",
+      "viewDemo": "Xem Demo",
+      "viewCode": "Xem mã nguồn",
+      "backToProjects": "Quay lại Dự án"
     },
     "technologies": {
       "title": "Công nghệ"

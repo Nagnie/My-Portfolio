@@ -1,5 +1,5 @@
 [
-    {
+  {
     "id": 1,
     "title": "Crypto Market Analysis System",
     "description": "A responsive platform that analyzes cryptocurrency market trends and generates insights.",
@@ -9,11 +9,19 @@
       "/assets/project1/3.png",
       "/assets/project1/4.png"
     ],
-    "technologies": ["React", "Tailwind CSS", "Shadcn/UI", "Java","Docker"],
+    "technologies": ["React", "Tailwind CSS", "Shadcn/UI", "Java", "Docker"],
     "githubUrl": "https://github.com/luricisme/Website_Frontend_AIShortVideo",
-    "liveUrl": "https://www.youtube.com/watch?v=c2D7xB67i14"
+    "liveUrl": "https://www.youtube.com/watch?v=c2D7xB67i14",
+    "date": "2024-12",
+    "details": [
+      "Real-time cryptocurrency market data tracking and analysis",
+      "Interactive charts and visualizations for price trends",
+      "AI-powered insights and predictions",
+      "User-friendly dashboard with customizable widgets",
+      "Multi-currency support with live exchange rates"
+    ]
   },
-    {
+  {
     "id": 2,
     "title": "Gmail Kanban Manager",
     "description": "A responsive platform that organizes Gmail emails using Kanban-style boards.",
@@ -22,9 +30,24 @@
       "/assets/project2/2.png",
       "/assets/project2/3.png"
     ],
-    "technologies": ["React", "Tailwind CSS", "Shadcn/UI", "Java","Docker", "Gmail API"],
+    "technologies": [
+      "React",
+      "Tailwind CSS",
+      "Shadcn/UI",
+      "Java",
+      "Docker",
+      "Gmail API"
+    ],
     "githubUrl": "https://github.com/Nagnie/Gmail-Kanban-Manager.git",
-    "liveUrl": "https://awad-navy.vercel.app"
+    "liveUrl": "https://awad-navy.vercel.app",
+    "date": "2024-11",
+    "details": [
+      "Gmail API integration for email management",
+      "Drag-and-drop Kanban board interface",
+      "Custom labels and categories",
+      "Email filtering and search functionality",
+      "Real-time synchronization with Gmail"
+    ]
   },
   {
     "id": 3,
@@ -39,7 +62,15 @@
     ],
     "technologies": ["Unity", "C#"],
     "githubUrl": "https://github.com/ducquang2/TowerDef",
-    "liveUrl": "https://www.youtube.com/watch?v=HP_rrhIscE4"
+    "liveUrl": "https://www.youtube.com/watch?v=HP_rrhIscE4",
+    "date": "2024-10",
+    "details": [
+      "Multiple tower types with unique abilities",
+      "10+ challenging levels with increasing difficulty",
+      "Various enemy types with different behaviors",
+      "Upgrade system for towers",
+      "Sound effects and background music"
+    ]
   },
   {
     "id": 4,
@@ -52,9 +83,25 @@
       "/assets/project4/4.png",
       "/assets/project4/5.png"
     ],
-    "technologies": ["Next.js", "PostgreSQL", "Tailwind CSS", "Redux", "Shadcn/UI", "Java","Docker"],
+    "technologies": [
+      "Next.js",
+      "PostgreSQL",
+      "Tailwind CSS",
+      "Redux",
+      "Shadcn/UI",
+      "Java",
+      "Docker"
+    ],
     "githubUrl": "https://github.com/luricisme/Website_Frontend_AIShortVideo",
-    "liveUrl": "https://website-frontend-ai-short-video.vercel.app"
+    "liveUrl": "https://www.youtube.com/watch?v=mLaDWI0t9Wo",
+    "date": "2024-09",
+    "details": [
+      "AI script generation with customizable parameters",
+      "Automatic image generation from text",
+      "Text-to-speech audio synthesis",
+      "Video compilation with transitions",
+      "Export in multiple formats and resolutions"
+    ]
   },
   {
     "id": 5,
@@ -67,9 +114,25 @@
       "/assets/project5/4.png",
       "/assets/project5/5.png"
     ],
-    "technologies": ["React", "Nest.js", "PostgreSQL", "Tailwind CSS", "Redis", "Docker"],
+    "technologies": [
+      "React",
+      "Nest.js",
+      "PostgreSQL",
+      "Tailwind CSS",
+      "Redis",
+      "Docker"
+    ],
     "githubUrl": "https://github.com/Nagnie/Cosmetic_Web_Store",
-    "liveUrl": "https://naucosmetic.com"
+    "liveUrl": "https://naucosmetic.com",
+    "date": "2024-08",
+    "details": [
+      "Complete product catalog with advanced search and filtering",
+      "Shopping cart and checkout system",
+      "User authentication and profile management",
+      "Order tracking and history",
+      "Admin dashboard for inventory management",
+      "Redis caching for improved performance"
+    ]
   },
   {
     "id": 6,
@@ -84,7 +147,16 @@
     ],
     "technologies": ["React", "Nest.js", "PostgreSQL", "Bootstrap", "Docker"],
     "githubUrl": "https://github.com/luricisme/Website_BookingHotel",
-    "liveUrl": "https://youtu.be/KmXjdy_OqfI"
+    "liveUrl": "https://youtu.be/KmXjdy_OqfI",
+    "date": "2024-07",
+    "details": [
+      "Hotel search with filters (location, price, amenities)",
+      "Real-time availability checking",
+      "Booking management system",
+      "User reviews and ratings",
+      "Payment gateway integration",
+      "Email notifications for bookings"
+    ]
   },
   {
     "id": 7,
@@ -99,6 +171,15 @@
     ],
     "technologies": ["WinUI", "C#", "PostgreSQL"],
     "githubUrl": "https://github.com/Nagnie/Cosmetic-Store-Management-System",
-    "liveUrl": "https://youtu.be/dsEfMf8Z9uw?si=DaK5Z_9XYVfovWOx"
+    "liveUrl": "https://youtu.be/dsEfMf8Z9uw?si=DaK5Z_9XYVfovWOx",
+    "date": "2024-06",
+    "details": [
+      "Complete CRUD operations for products",
+      "Inventory tracking and alerts",
+      "Sales reporting and analytics",
+      "Employee management",
+      "Customer database",
+      "Modern WinUI interface with dark/light themes"
+    ]
   }
 ]

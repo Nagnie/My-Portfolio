@@ -1,5 +1,5 @@
 [
-    {
+  {
     "id": 1,
     "title": "Hệ Thống Phân Tích Thị Trường Tiền Mã Hóa",
     "description": "Một nền tảng responsive phân tích xu hướng thị trường tiền mã hóa và tạo ra những thông tin chi tiết.",
@@ -9,11 +9,27 @@
       "/assets/project1/3.png",
       "/assets/project1/4.png"
     ],
-    "technologies": ["React", "PostgreSQL", "Tailwind CSS", "Redux", "Shadcn/UI", "Java","Docker"],
+    "technologies": [
+      "React",
+      "PostgreSQL",
+      "Tailwind CSS",
+      "Redux",
+      "Shadcn/UI",
+      "Java",
+      "Docker"
+    ],
     "githubUrl": "https://github.com/luricisme/Website_Frontend_AIShortVideo",
-    "liveUrl": "https://www.youtube.com/watch?v=c2D7xB67i14"
+    "liveUrl": "https://www.youtube.com/watch?v=c2D7xB67i14",
+    "date": "2024-12",
+    "details": [
+      "Theo dõi và phân tích dữ liệu thị trường tiền mã hóa theo thời gian thực",
+      "Biểu đồ và trực quan hóa tương tác cho xu hướng giá",
+      "Thông tin chi tiết và dự đoán được hỗ trợ bởi AI",
+      "Bảng điều khiển thân thiện với các widget tùy chỉnh",
+      "Hỗ trợ đa tiền tệ với tỷ giá hối đoái trực tiếp"
+    ]
   },
-    {
+  {
     "id": 2,
     "title": "Trình Quản Lý Gmail Kanban",
     "description": "Một nền tảng responsive tổ chức email Gmail sử dụng bảng kiểu Kanban.",
@@ -22,11 +38,27 @@
       "/assets/project2/2.png",
       "/assets/project2/3.png"
     ],
-    "technologies": ["React", "PostgreSQL", "Tailwind CSS", "Redux", "Shadcn/UI", "Java","Docker"],
+    "technologies": [
+      "React",
+      "PostgreSQL",
+      "Tailwind CSS",
+      "Redux",
+      "Shadcn/UI",
+      "Java",
+      "Docker"
+    ],
     "githubUrl": "https://github.com/Nagnie/Gmail-Kanban-Manager.git",
-    "liveUrl": "https://awad-navy.vercel.app"
+    "liveUrl": "https://awad-navy.vercel.app",
+    "date": "2024-11",
+    "details": [
+      "Tích hợp Gmail API để quản lý email",
+      "Giao diện bảng Kanban kéo và thả",
+      "Nhãn và danh mục tùy chỉnh",
+      "Chức năng lọc và tìm kiếm email",
+      "Đồng bộ hóa theo thời gian thực với Gmail"
+    ]
   },
-    {
+  {
     "id": 3,
     "title": "Tower Defense Game",
     "description": "Một trò chơi phòng thủ tháp desktop với giao diện thân thiện, được phát triển bằng Unity và C#, với nhiều cấp độ và loại kẻ thù.",
@@ -39,7 +71,15 @@
     ],
     "technologies": ["Unity", "C#"],
     "githubUrl": "https://github.com/ducquang2/TowerDef",
-    "liveUrl": "https://www.youtube.com/watch?v=HP_rrhIscE4"
+    "liveUrl": "https://www.youtube.com/watch?v=HP_rrhIscE4",
+    "date": "2024-10",
+    "details": [
+      "Nhiều loại tháp với khả năng độc đáo",
+      "Hơn 10 cấp độ thử thách với độ khó tăng dần",
+      "Các loại kẻ thù khác nhau với hành vi đa dạng",
+      "Hệ thống nâng cấp cho tháp",
+      "Hiệu ứng âm thanh và nhạc nền"
+    ]
   },
   {
     "id": 4,
@@ -52,9 +92,25 @@
       "/assets/project4/4.png",
       "/assets/project4/5.png"
     ],
-    "technologies": ["Next.js", "PostgreSQL", "Tailwind CSS", "Redux", "Shadcn/UI", "Java","Docker"],
+    "technologies": [
+      "Next.js",
+      "PostgreSQL",
+      "Tailwind CSS",
+      "Redux",
+      "Shadcn/UI",
+      "Java",
+      "Docker"
+    ],
     "githubUrl": "https://github.com/luricisme/Website_Frontend_AIShortVideo",
-    "liveUrl": "https://website-frontend-ai-short-video.vercel.app"
+    "liveUrl": "https://www.youtube.com/watch?v=mLaDWI0t9Wo",
+    "date": "2024-09",
+    "details": [
+      "Tạo kịch bản AI với các tham số tùy chỉnh",
+      "Tự động tạo hình ảnh từ văn bản",
+      "Tổng hợp âm thanh chuyển văn bản thành giọng nói",
+      "Biên tập video với hiệu ứng chuyển cảnh",
+      "Xuất ở nhiều định dạng và độ phân giải"
+    ]
   },
   {
     "id": 5,
@@ -67,9 +123,25 @@
       "/assets/project5/4.png",
       "/assets/project5/5.png"
     ],
-    "technologies": ["React", "Nest.js", "PostgreSQL", "Tailwind CSS", "Redis", "Docker"],
+    "technologies": [
+      "React",
+      "Nest.js",
+      "PostgreSQL",
+      "Tailwind CSS",
+      "Redis",
+      "Docker"
+    ],
     "githubUrl": "https://github.com/Nagnie/Cosmetic_Web_Store",
-    "liveUrl": "https://naucosmetic.com"
+    "liveUrl": "https://naucosmetic.com",
+    "date": "2024-08",
+    "details": [
+      "Danh mục sản phẩm đầy đủ với tìm kiếm và lọc nâng cao",
+      "Giỏ hàng và hệ thống thanh toán",
+      "Xác thực người dùng và quản lý hồ sơ",
+      "Theo dõi đơn hàng và lịch sử",
+      "Bảng quản trị để quản lý tồn kho",
+      "Bộ nhớ đệm Redis để cải thiện hiệu suất"
+    ]
   },
   {
     "id": 6,
@@ -84,7 +156,16 @@
     ],
     "technologies": ["React", "Nest.js", "PostgreSQL", "Bootstrap", "Docker"],
     "githubUrl": "https://github.com/luricisme/Website_BookingHotel",
-    "liveUrl": "https://youtu.be/KmXjdy_OqfI"
+    "liveUrl": "https://youtu.be/KmXjdy_OqfI",
+    "date": "2024-07",
+    "details": [
+      "Tìm kiếm khách sạn với bộ lọc (vị trí, giá, tiện nghi)",
+      "Kiểm tra tình trạng phòng trống theo thời gian thực",
+      "Hệ thống quản lý đặt phòng",
+      "Đánh giá và xếp hạng của người dùng",
+      "Tích hợp cổng thanh toán",
+      "Thông báo email cho đặt phòng"
+    ]
   },
   {
     "id": 7,
@@ -99,6 +180,15 @@
     ],
     "technologies": ["WinUI", "C#", "PostgreSQL"],
     "githubUrl": "https://github.com/Nagnie/Cosmetic-Store-Management-System",
-    "liveUrl": "https://youtu.be/dsEfMf8Z9uw?si=DaK5Z_9XYVfovWOx"
+    "liveUrl": "https://youtu.be/dsEfMf8Z9uw?si=DaK5Z_9XYVfovWOx",
+    "date": "2024-06",
+    "details": [
+      "Đầy đủ các thao tác CRUD cho sản phẩm",
+      "Theo dõi tồn kho và cảnh báo",
+      "Báo cáo bán hàng và phân tích",
+      "Quản lý nhân viên",
+      "Cơ sở dữ liệu khách hàng",
+      "Giao diện WinUI hiện đại với chủ đề tối/sáng"
+    ]
   }
 ]
