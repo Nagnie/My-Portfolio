@@ -21,8 +21,13 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="vi" suppressHydrationWarning>
-        <body className={inter.className}>
-            <ThemeProvider>
+        <body className={inter.className} suppressHydrationWarning>
+            <ThemeProvider
+                attribute="class"
+                defaultTheme="system"
+                enableSystem
+                disableTransitionOnChange
+            >
                 <LanguageProvider translations={translations} initialLanguage="en">
                     {children}
                 </LanguageProvider>

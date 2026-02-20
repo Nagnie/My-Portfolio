@@ -1,38 +1,35 @@
 [
-  {
+    {
     "id": 1,
-    "title": "AI Short Video Creator",
-    "description": "A responsive platform that transforms AI-generated scripts into images, audio, and video content.",
+    "title": "Crypto Market Analysis System",
+    "description": "A responsive platform that analyzes cryptocurrency market trends and generates insights.",
     "images": [
       "/assets/project1/1.png",
       "/assets/project1/2.png",
       "/assets/project1/3.png",
-      "/assets/project1/4.png",
-      "/assets/project1/5.png"
+      "/assets/project1/4.png"
     ],
-    "technologies": ["Next.js", "PostgreSQL", "Tailwind CSS", "Redux", "Shadcn/UI", "Java","Docker"],
+    "technologies": ["React", "Tailwind CSS", "Shadcn/UI", "Java","Docker"],
     "githubUrl": "https://github.com/luricisme/Website_Frontend_AIShortVideo",
-    "liveUrl": "https://website-frontend-ai-short-video.vercel.app"
+    "liveUrl": "https://www.youtube.com/watch?v=c2D7xB67i14"
   },
-  {
+    {
     "id": 2,
-    "title": "Nau Cosmetic",
-    "description": "A responsive e-commerce website for a cosmetic store, built in collaboration with backend developers to integrate RESTful APIs and ensure smooth deployment.",
+    "title": "Gmail Kanban Manager",
+    "description": "A responsive platform that organizes Gmail emails using Kanban-style boards.",
     "images": [
       "/assets/project2/1.png",
       "/assets/project2/2.png",
-      "/assets/project2/3.png",
-      "/assets/project2/4.png",
-      "/assets/project2/5.png"
+      "/assets/project2/3.png"
     ],
-    "technologies": ["React", "Nest.js", "PostgreSQL", "Tailwind CSS", "Redis", "Docker"],
-    "githubUrl": "https://github.com/Nagnie/Cosmetic_Web_Store",
-    "liveUrl": "https://naucosmetic.com"
+    "technologies": ["React", "Tailwind CSS", "Shadcn/UI", "Java","Docker", "Gmail API"],
+    "githubUrl": "https://github.com/Nagnie/Gmail-Kanban-Manager.git",
+    "liveUrl": "https://awad-navy.vercel.app"
   },
   {
     "id": 3,
-    "title": "BookaStay",
-    "description": "A hotel booking platform with a user-friendly UI, optimized for responsiveness and enhanced with RESTful API integration.",
+    "title": "Tower Defense Game",
+    "description": "A desktop tower defense game with a user-friendly UI, developed using Unity and C#, featuring multiple levels and enemy types.",
     "images": [
       "/assets/project3/1.png",
       "/assets/project3/2.png",
@@ -40,23 +37,67 @@
       "/assets/project3/4.png",
       "/assets/project3/5.png"
     ],
-    "technologies": ["React", "Nest.js", "PostgreSQL", "Bootstrap", "Docker"],
-    "githubUrl": "https://github.com/luricisme/Website_BookingHotel",
-    "liveUrl": "https://youtu.be/KmXjdy_OqfI"
+    "technologies": ["Unity", "C#"],
+    "githubUrl": "https://github.com/ducquang2/TowerDef",
+    "liveUrl": "https://www.youtube.com/watch?v=HP_rrhIscE4"
   },
   {
     "id": 4,
-    "title": "Task Management App",
-    "description": "A desktop application for managing a cosmetic store, featuring a user-friendly UI and full CRUD functionality integrated with PostgreSQL.",
+    "title": "AI Short Video Creator",
+    "description": "A responsive platform that transforms AI-generated scripts into images, audio, and video content.",
     "images": [
       "/assets/project4/1.png",
-      "/assets/project4/2.png",
       "/assets/project4/2.png",
       "/assets/project4/3.png",
       "/assets/project4/4.png",
       "/assets/project4/5.png"
     ],
-    "technologies": ["WinUI", ".NET", "C#", "PostgreSQL"],
+    "technologies": ["Next.js", "PostgreSQL", "Tailwind CSS", "Redux", "Shadcn/UI", "Java","Docker"],
+    "githubUrl": "https://github.com/luricisme/Website_Frontend_AIShortVideo",
+    "liveUrl": "https://website-frontend-ai-short-video.vercel.app"
+  },
+  {
+    "id": 5,
+    "title": "Nau Cosmetic",
+    "description": "A responsive e-commerce website for a cosmetic store, built in collaboration with backend developers to integrate RESTful APIs and ensure smooth deployment.",
+    "images": [
+      "/assets/project5/1.png",
+      "/assets/project5/2.png",
+      "/assets/project5/3.png",
+      "/assets/project5/4.png",
+      "/assets/project5/5.png"
+    ],
+    "technologies": ["React", "Nest.js", "PostgreSQL", "Tailwind CSS", "Redis", "Docker"],
+    "githubUrl": "https://github.com/Nagnie/Cosmetic_Web_Store",
+    "liveUrl": "https://naucosmetic.com"
+  },
+  {
+    "id": 6,
+    "title": "BookaStay",
+    "description": "A hotel booking platform with a user-friendly UI, optimized for responsiveness and enhanced with RESTful API integration.",
+    "images": [
+      "/assets/project6/1.png",
+      "/assets/project6/2.png",
+      "/assets/project6/3.png",
+      "/assets/project6/4.png",
+      "/assets/project6/5.png"
+    ],
+    "technologies": ["React", "Nest.js", "PostgreSQL", "Bootstrap", "Docker"],
+    "githubUrl": "https://github.com/luricisme/Website_BookingHotel",
+    "liveUrl": "https://youtu.be/KmXjdy_OqfI"
+  },
+  {
+    "id": 7,
+    "title": "Task Management App",
+    "description": "A desktop application for managing a cosmetic store, featuring a user-friendly UI and full CRUD functionality integrated with PostgreSQL.",
+    "images": [
+      "/assets/project7/1.png",
+      "/assets/project7/2.png",
+      "/assets/project7/3.png",
+      "/assets/project7/4.png",
+      "/assets/project7/5.png"
+    ],
+    "technologies": ["WinUI", "C#", "PostgreSQL"],
     "githubUrl": "https://github.com/Nagnie/Cosmetic-Store-Management-System",
     "liveUrl": "https://youtu.be/dsEfMf8Z9uw?si=DaK5Z_9XYVfovWOx"
   }

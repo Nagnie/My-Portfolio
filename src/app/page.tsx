@@ -8,12 +8,12 @@ import Link from "next/link"
 import Image from "next/image"
 import { FaGithub, FaLinkedin, FaReact, FaHtml5, FaCss3Alt, FaNodeJs,
   FaGit, FaVuejs, FaBootstrap, FaDocker, FaLinux, FaJenkins, FaJira, FaTrello } from "react-icons/fa"
-import { SiNextdotjs, SiTypescript, SiJavascript, SiTailwindcss, SiPostgresql, SiDotnet,
-  SiKubernetes, SiPrometheus, SiGrafana, SiRedux, SiShadcnui } from "react-icons/si";
+import { SiNextdotjs, SiTypescript, SiJavascript, SiTailwindcss, SiPostgresql, SiBitbucket, SiCplusplus, SiAntdesign,
+  SiKubernetes, SiPrometheus, SiGrafana, SiRedux, SiShadcnui, SiDrizzle,  
+  SiUnity } from "react-icons/si";
 import { TbBrandCSharp } from "react-icons/tb";
 import { DiMsqlServer } from "react-icons/di";
-import { Mail, Phone, MapPin, ExternalLink, Send, MoveRight } from "lucide-react"
-import { Badge } from "@/components/ui/badge"
+import { Mail, Phone, MapPin, Send, MoveRight } from "lucide-react"
 import {useState, useRef, useEffect} from "react"
 import emailjs from '@emailjs/browser';
 import Icon from "../../public/assets/icon"
@@ -56,7 +56,7 @@ const iconComponents = {
   FaDocker,
   FaGithub,
   TbBrandCSharp,
-  SiDotnet,
+  SiBitbucket,
   DiMsqlServer,
   FaJenkins,
   FaLinux,
@@ -66,7 +66,11 @@ const iconComponents = {
   SiRedux,
   SiShadcnui,
   FaJira,
-  FaTrello
+  FaTrello,
+  SiAntdesign,
+  SiDrizzle,
+  SiCplusplus,
+  SiUnity
 };
 
 export default function Home() {
@@ -179,7 +183,7 @@ export default function Home() {
             <div className="border-x border-b h-210 flex flex-col items-center p-6 sticky">
               <div className="rounded-full w-70 h-70 mt-12 mb-10">
                 <Image
-                    src="/assets/avatar.jpg"
+                    src="/assets/avatar.png"
                     alt="Profile picture"
                     width={350}
                     height={350}

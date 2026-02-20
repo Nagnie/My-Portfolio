@@ -5,7 +5,7 @@
     "institution": "University of Science, VNUHCM",
     "location": "Ho Chi Minh City, Vietnam",
     "period": "2022 - 2026 (Expected)",
-    "description": "GPA: 3.62/4.0",
+    "description": "GPA: 3.66/4.0",
     "coursework": [
       "Object Oriented Programming",
       "Data Structure and Algorithms",
@@ -19,7 +19,11 @@
       "Fundamentals of Artificial Intelligence",
       "Computer Systems",
       "Introduction to DevOps",
-      "Software Design"
+      "Software Design",
+      "Software Architecture",
+      "DevOps Advanced",
+      "Game Development",
+      "Advanced Web Application Development"
     ]
   }
 ]

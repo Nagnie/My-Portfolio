@@ -40,6 +40,10 @@
     "icon": "TbBrandCSharp"
   },
   {
+    "name": "C++",
+    "icon": "SiCplusplus"
+  },
+  {
     "name": "Node.js",
     "icon": "FaNodeJs"
   },
@@ -60,8 +64,8 @@
     "icon": "FaDocker"
   },
   {
-    "name": "C#",
-    "icon": "SiDotnet"
+    "name": "Bitbucket",
+    "icon": "SiBitbucket"
   },
   {
     "name": "Linux",
@@ -98,5 +102,17 @@
   {
     "name": "Trello",
     "icon": "FaTrello"
+  },
+  {
+    "name": "Ant Design",
+    "icon": "SiAntdesign"
+  },
+  {
+    "name": "Drizzle ORM",
+    "icon": "SiDrizzle"
+  },
+  {
+    "name": "Unity",
+    "icon": "SiUnity"
   }
 ]

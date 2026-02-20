@@ -4,11 +4,16 @@ import * as React from "react"
 import { ThemeProvider as NextThemesProvider } from "next-themes"
 import { type ThemeProviderProps } from "next-themes"
 
-// @ts-ignore
-export function ThemeProvider({ Component, pageProps }) {
+export function ThemeProvider({ children, ...props }: ThemeProviderProps) {
     return (
-        <NextThemesProvider>
-            <Component {...pageProps} />
+        <NextThemesProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+            {...props}
+        >
+            {children}
         </NextThemesProvider>
     )
 }

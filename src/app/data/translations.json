@@ -12,7 +12,7 @@
     },
     "info": {
       "name": "Tran Thao Ngan",
-      "role": "Frontend Developer",
+      "role": "Fullstack Developer",
       "address": "Ho Chi Minh City, Vietnam",
       "button1": "Contact me",
       "button2": "My Resume"
@@ -20,7 +20,7 @@
     "about": {
       "intro": "Hello, I am",
       "name": "Thao Ngan",
-      "description": "I’m a third-year Software Engineering student at the University of Science - VNUHCM. I have a strong passion for Frontend Development and am currently expanding my knowledge of JavaScript frameworks like React, Vue."
+      "description": "I’m a final-year Software Engineering student at the University of Science - VNUHCM. I have a strong passion for Fullstack Development and am currently expanding my knowledge of JavaScript frameworks like React, Vue."
     },
     "education": {
       "title": "Education"
@@ -56,7 +56,7 @@
     },
     "info": {
       "name": "Trần Thảo Ngân",
-      "role": "Lập trình viên Frontend",
+      "role": "Lập trình viên Fullstack",
       "address": "Thành phố Hồ Chí Minh, Việt Nam",
       "button1": "Liên hệ với tôi",
       "button2": "CV của tôi"
@@ -64,7 +64,7 @@
     "about": {
       "intro": "Xin chào, mình là",
       "name": "Thảo Ngân",
-      "description": "Mình là sinh viên năm ba ngành Kỹ thuật Phần mềm tại Trường Đại học Khoa học Tự nhiên - ĐHQG TP.HCM. Mình có niềm đam mê lớn với phát triển Frontend và hiện đang mở rộng kiến thức về các framework JavaScript như React, Vue."
+      "description": "Mình là sinh viên năm ba ngành Kỹ thuật Phần mềm tại Trường Đại học Khoa học Tự nhiên - ĐHQG TP.HCM. Mình có niềm đam mê lớn với phát triển Fullstack  và hiện đang mở rộng kiến thức về các framework JavaScript như React, Vue."
     },
     "education": {
       "title": "Học vấn"

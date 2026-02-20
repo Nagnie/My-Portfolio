@@ -92,7 +92,7 @@ export default function ProjectSection() {
                             </Button>
                             <Button size="sm" asChild style={{ backgroundColor: "var(--background)" }}>
                                 <Link href={project.liveUrl} target="_blank">
-                                    <ExternalLink className="mr-2 h-4 w-4" /> Live Demo
+                                    <ExternalLink className="mr-2 h-4 w-4" /> Demo
                                 </Link>
                             </Button>
                         </div>
