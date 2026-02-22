@@ -2,10 +2,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import { ThemeProvider } from "next-themes";
 import React from "react";
-import { LanguageProvider } from "@/components/language-context";
-import translations from "../app/data/translations.json";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,16 +18,7 @@ export default function RootLayout({
   return (
     <html lang='vi' suppressHydrationWarning>
       <body className={inter.className} suppressHydrationWarning>
-        <ThemeProvider
-          attribute='class'
-          defaultTheme='system'
-          enableSystem
-          disableTransitionOnChange
-        >
-          <LanguageProvider translations={translations} initialLanguage='en'>
-            {children}
-          </LanguageProvider>
-        </ThemeProvider>
+        {children}
       </body>
     </html>
   );

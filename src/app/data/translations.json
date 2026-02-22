@@ -2,6 +2,7 @@
   "en": {
     "navigation": {
       "about": "About",
+      "work-experience": "Work Experience",
       "education": "Education",
       "projects": "Projects",
       "technologies": "Technologies",
@@ -20,7 +21,10 @@
     "about": {
       "intro": "Hello, I am",
       "name": "Thao Ngan",
-      "description": "I’m a final-year Software Engineering student at the University of Science - VNUHCM. I have a strong passion for Fullstack Development and am currently expanding my knowledge of JavaScript frameworks like React, Vue."
+      "description": "Junior Software Engineer with strong frontend expertise and foundational full-stack development experience. Experienced in building responsive and scalable web applications. Familiar with modern development practices including RESTful APIs, CI/CD, and Agile methodologies. Eager to learn, grow, and contribute to impactful products in collaborative, global engineering environments."
+    },
+    "work-experience": {
+      "title": "Work Experience"
     },
     "education": {
       "title": "Education"
@@ -57,6 +61,7 @@
   "vi": {
     "navigation": {
       "about": "Giới thiệu",
+      "work-experience": "Kinh nghiệm",
       "education": "Học vấn",
       "projects": "Dự án",
       "technologies": "Công nghệ",
@@ -75,7 +80,10 @@
     "about": {
       "intro": "Xin chào, mình là",
       "name": "Thảo Ngân",
-      "description": "Mình là sinh viên năm ba ngành Kỹ thuật Phần mềm tại Trường Đại học Khoa học Tự nhiên - ĐHQG TP.HCM. Mình có niềm đam mê lớn với phát triển Fullstack  và hiện đang mở rộng kiến thức về các framework JavaScript như React, Vue."
+      "description": "Kỹ sư phần mềm Junior với thế mạnh về frontend và nền tảng kiến thức về phát triển full-stack. Có kinh nghiệm xây dựng các ứng dụng web có khả năng mở rộng và thân thiện với người dùng. Quen thuộc với các thực hành phát triển phần mềm hiện đại như RESTful APIs, CI/CD và Agile. Luôn sẵn sàng học hỏi, phát triển bản thân và đóng góp vào các sản phẩm có giá trị trong môi trường kỹ thuật mang tính toàn cầu."
+    },
+    "work-experience": {
+      "title": "Kinh nghiệm làm việc"
     },
     "education": {
       "title": "Học vấn"

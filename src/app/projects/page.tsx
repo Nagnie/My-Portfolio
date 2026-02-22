@@ -13,17 +13,14 @@ import { Autoplay, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import projectEn from "@/app/data/projects_en.json";
-import projectVi from "@/app/data/projects_vi.json";
 import translations from "@/app/data/translations.json";
 import { Header } from "@/components/header";
-import { useLanguage } from "@/components/language-context";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 
 export default function ProjectsPage() {
-  const { language } = useLanguage();
-  const projectData = language === "vi" ? projectVi : projectEn;
-  const t = translations[language as keyof typeof translations];
+  const projectData = projectEn;
+  const t = translations.en;
   const router = useRouter();
 
   const [sortOrder, setSortOrder] = useState<"newest" | "oldest">("newest");

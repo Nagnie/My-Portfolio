@@ -8,17 +8,11 @@ import {
   ReactPortal,
 } from "react";
 
-// Import cả 2 bộ dữ liệu
 import educationEn from "@/app/data/education_en.json";
-import educationVi from "@/app/data/education_vi.json";
-import { useLanguage } from "@/components/language-context";
 import { Badge } from "@/components/ui/badge";
 
 export default function EducationSection() {
-  const { language } = useLanguage();
-
-  // Chọn data theo ngôn ngữ
-  const educationData = language === "vi" ? educationVi : educationEn;
+  const educationData = educationEn;
 
   return (
     <div className='space-y-8'>

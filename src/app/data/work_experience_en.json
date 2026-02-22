@@ -1,0 +1,15 @@
+[
+  {
+    "id": 1,
+    "company": "DevSamurai",
+    "position": "Full-Stack Developer",
+    "period": "Aug 2025 – Present",
+    "highlights": [
+      "Contributed to the development and maintenance of internal Atlassian applications on the Forge serverless platform.",
+      "Participated in building a new application from scratch, contributing to system architecture and feature implementation.",
+      "Maintained and refactored legacy code to improve readability and performance.",
+      "Fixed bugs and enhanced UI/UX for existing applications, improving overall user experience.",
+      "Worked in a collaborative Agile team environment, conducted code reviews to ensure code quality and adherence to team standards."
+    ]
+  }
+]

@@ -12,16 +12,13 @@ import { Autoplay, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import projectEn from "@/app/data/projects_en.json";
-import projectVi from "@/app/data/projects_vi.json";
 import translations from "@/app/data/translations.json";
-import { useLanguage } from "@/components/language-context";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 
 export default function ProjectSection() {
-  const { language } = useLanguage();
-  const projectData = language === "vi" ? projectVi : projectEn;
-  const t = translations[language as keyof typeof translations];
+  const projectData = projectEn;
+  const t = translations.en;
 
   // Show only the 4 most recent projects (first 4 items)
   const recentProjects = projectData.slice(0, 4);

@@ -51,9 +51,9 @@ import { TbBrandCSharp } from "react-icons/tb";
 import EducationSection from "@/components/EducationSection";
 import FadeInSection from "@/components/FadeInSection";
 import { Header } from "@/components/header";
-import { useLanguage } from "@/components/language-context";
 import ProjectSection from "@/components/ProjectsSection";
 import ScrollNavLink from "@/components/ScrollNavLink";
+import WorkExperienceSection from "@/components/WorkExperienceSection";
 import { Button } from "@/components/ui/button";
 import emailjs from "@emailjs/browser";
 
@@ -62,6 +62,7 @@ import Icon2 from "../../public/assets/icon2";
 // Import data
 import projects from "./data/projects_en.json";
 import technologies from "./data/technologies.json";
+import translations from "./data/translations.json";
 
 const iconComponents = {
   FaReact,
@@ -193,7 +194,7 @@ export default function Home() {
       });
   };
 
-  const { t } = useLanguage();
+  const t = translations.en;
 
   return (
     <div className='flex min-h-screen flex-col'>
@@ -213,9 +214,9 @@ export default function Home() {
             </div>
 
             <h2 className='text-4xl font-bold text-center mb-3'>
-              {t("name", "info")}
+              {t.info.name}
             </h2>
-            <p className='text-xl mb-6 border-b'>{t("role", "info")}</p>
+            <p className='text-xl mb-6 border-b'>{t.info.role}</p>
 
             <div className='mb-2 text-center flex items-center'>
               <Mail className='h-5 w-5' />
@@ -236,7 +237,7 @@ export default function Home() {
 
             <div className='mb-6 text-center flex items-center'>
               <MapPin className='h-5 w-5' />
-              <p className='ms-2'>{t("address", "info")}</p>
+              <p className='ms-2'>{t.info.address}</p>
             </div>
 
             <div className='flex gap-5 mb-6'>
@@ -257,7 +258,7 @@ export default function Home() {
             </div>
 
             <div className='mb-4'>
-              <Link href='#contact'>{t("button1", "info")}</Link>
+              <Link href='#contact'>{t.info.button1}</Link>
             </div>
 
             <Button
@@ -266,7 +267,7 @@ export default function Home() {
               className='hover:bg-[var(--sidebar-border)] px-5'
             >
               <Link href='/assets/resume.pdf' target={"_blank"} download>
-                {t("button2", "info")}
+                {t.info.button2}
               </Link>
             </Button>
           </div>
@@ -282,13 +283,13 @@ export default function Home() {
               <div className='flex max-w-[1120px] items-start justify-between gap-4'>
                 <div>
                   <div className='text-4xl md:text-5xl font-extrabold leading-tight tracking-tighter mb-8 flex flex-col lg:flex-none'>
-                    {t("intro", "about")}{" "}
-                    <span className='text-primary text-6xl md:text-8xl'>
-                      {t("name", "about")}
+                    {t.about.intro}{" "}
+                    <span className='text-primary text-7xl md:text-9xl playball-regular'>
+                      {t.about.name}
                     </span>
                   </div>
                   <p className='max-w-[780px] text-xl text-muted-foreground'>
-                    {t("description", "about")}
+                    {t.about.description}
                   </p>
                   <div className='flex gap-4 mt-8'>
                     <Button
@@ -301,7 +302,7 @@ export default function Home() {
                         target={"_blank"}
                         download
                       >
-                        {t("button2", "info")}
+                        {t.info.button2}
                       </Link>
                     </Button>
                   </div>
@@ -316,6 +317,25 @@ export default function Home() {
             </section>
           </FadeInSection>
 
+          {/* Work Experience section */}
+          <FadeInSection>
+            <section className='mt-15 pt-15' id='work-experience'>
+              <div className='container'>
+                <div className={"mb-2 pb-2 flex items-center"}>
+                  <Icon2 className={"h-6"} />
+                  <h2 className='ms-3 text-3xl font-bold'>
+                    {t["work-experience"].title}
+                  </h2>
+                </div>
+                <ScrollNavLink>
+                  <div className='border mb-8'></div>
+                </ScrollNavLink>
+
+                <WorkExperienceSection />
+              </div>
+            </section>
+          </FadeInSection>
+
           {/* Education section */}
           <FadeInSection>
             <section className='mt-15 pt-15' id='education'>
@@ -323,7 +343,7 @@ export default function Home() {
                 <div className={"mb-2 pb-2 flex items-center"}>
                   <Icon2 className={"h-6"} />
                   <h2 className='ms-3 text-3xl font-bold'>
-                    {t("title", "education")}
+                    {t.education.title}
                   </h2>
                 </div>
                 <ScrollNavLink>
@@ -343,7 +363,7 @@ export default function Home() {
                   <div className='flex items-center justify-between'>
                     <Icon2 className={"h-6"} />
                     <h2 className='ms-3 text-3xl font-bold'>
-                      {t("title", "projects")}
+                      {t.projects.title}
                     </h2>
                   </div>
 
@@ -374,7 +394,7 @@ export default function Home() {
                 <div className={"mb-2 pb-2 flex items-center"}>
                   <Icon2 className={"h-6"} />
                   <h2 className='ms-3 text-3xl font-bold'>
-                    {t("title", "technologies")}
+                    {t.technologies.title}
                   </h2>
                 </div>
                 <ScrollNavLink>
@@ -412,9 +432,7 @@ export default function Home() {
               <div className='container'>
                 <div className={"mb-2 pb-2 flex items-center"}>
                   <Icon2 className={"h-6"} />
-                  <h2 className='ms-3 text-3xl font-bold'>
-                    {t("title", "contact")}
-                  </h2>
+                  <h2 className='ms-3 text-3xl font-bold'>{t.contact.title}</h2>
                 </div>
                 <ScrollNavLink>
                   <div className='border mb-8'></div>
@@ -423,11 +441,11 @@ export default function Home() {
                 <div className='rounded-lg border bg-card p-6 shadow-sm'>
                   {submitStatus === "success" ? (
                     <div className='p-4 bg-green-50 text-green-700 rounded-md mb-4'>
-                      {t("success", "contact")}
+                      {t.contact.success}
                     </div>
                   ) : submitStatus === "error" ? (
                     <div className='p-4 bg-red-50 text-red-700 rounded-md mb-4'>
-                      {t("error", "contact")}
+                      {t.contact.error}
                     </div>
                   ) : null}
 
@@ -439,7 +457,7 @@ export default function Home() {
                     <div className='grid grid-cols-1 md:grid-cols-2 gap-5'>
                       <div className='space-y-2'>
                         <label htmlFor='name' className='font-medium'>
-                          {t("name", "contact")}
+                          {t.contact.name}
                         </label>
                         <input
                           id='name'
@@ -451,7 +469,7 @@ export default function Home() {
                       </div>
                       <div className='space-y-2'>
                         <label htmlFor='email' className='font-medium'>
-                          {t("email", "contact")}
+                          {t.contact.email}
                         </label>
                         <input
                           id='email'
@@ -465,7 +483,7 @@ export default function Home() {
                     </div>
                     <div className='space-y-2'>
                       <label htmlFor='subject' className='font-medium'>
-                        {t("subject", "contact")}
+                        {t.contact.subject}
                       </label>
                       <input
                         id='subject'
@@ -477,7 +495,7 @@ export default function Home() {
                     </div>
                     <div className='space-y-2'>
                       <label htmlFor='message' className='font-medium'>
-                        {t("message", "contact")}
+                        {t.contact.message}
                       </label>
                       <textarea
                         id='message'
@@ -496,7 +514,7 @@ export default function Home() {
                       {isSubmitting ? (
                         <>
                           <span className={"ms-2 me-1"}>
-                            {t("sending", "contact")}
+                            {t.contact.sending}
                           </span>
                           <svg
                             className='animate-spin mx-1 h-4 w-4 text-white'
@@ -521,9 +539,7 @@ export default function Home() {
                         </>
                       ) : (
                         <>
-                          <span className='ms-2 me-1'>
-                            {t("send", "contact")}
-                          </span>
+                          <span className='ms-2 me-1'>{t.contact.send}</span>
                           <Send className='mx-1' size={18} />
                         </>
                       )}
