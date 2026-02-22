@@ -6,9 +6,16 @@ export default function WorkExperienceSection() {
   const workData = workExperienceEn;
 
   return (
-    <div className='space-y-8'>
+    <div className='space-y-8 text-custom'>
       {workData.map((work: any) => (
-        <div key={work.id} className='rounded-lg border bg-card p-6 shadow-sm'>
+        <div
+          key={work.id}
+          className='rounded-lg p-6 shadow-sm'
+          style={{
+            outline: "1px solid #D35270",
+            boxShadow: "0 0 40px rgba(239, 106, 133, 0.40)",
+          }}
+        >
           <div className={"flex items-center justify-between"}>
             <div className={"flex flex-col gap-2"}>
               <h3 className='text-xl font-semibold'>{work.company}</h3>

@@ -6,30 +6,31 @@ import "@/app/globals.css";
 
 import { ExternalLink } from "lucide-react";
 import Link from "next/link";
-import React from "react";
 import { FaGithub } from "react-icons/fa";
 import { Autoplay, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import projectEn from "@/app/data/projects_en.json";
-import translations from "@/app/data/translations.json";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 
 export default function ProjectSection() {
   const projectData = projectEn;
-  const t = translations.en;
 
   // Show only the 4 most recent projects (first 4 items)
   const recentProjects = projectData.slice(0, 4);
 
   return (
-    <div className='space-y-8'>
-      <div className='grid gap-10 grid-cols-1 lg:grid-cols-2'>
+    <div className='space-y-8 text-custom'>
+      <div className='grid gap-16 grid-cols-1 lg:grid-cols-2'>
         {recentProjects.map((project: any) => (
           <div
             key={project.id}
-            className='rounded-lg border bg-card hover:bg-[var(--sidebar-border)] p-6'
+            className='rounded-lg hover:scale-102 p-6 transition-transform duration-300'
+            style={{
+              outline: "1px solid #D35270",
+              boxShadow: "0 0 20px rgba(239, 106, 133, 0.40)",
+            }}
           >
             <style>
               {`
@@ -85,7 +86,7 @@ export default function ProjectSection() {
                 <Badge
                   key={index}
                   variant='outline'
-                  style={{ backgroundColor: "var(--background)" }}
+                  style={{ border: "1px solid #D35270" }}
                 >
                   {tech}
                 </Badge>
@@ -96,7 +97,6 @@ export default function ProjectSection() {
                 variant='outline'
                 size='sm'
                 asChild
-                style={{ backgroundColor: "var(--background)" }}
               >
                 <Link href={project.githubUrl} target='_blank'>
                   <FaGithub className='mr-2' /> Code
@@ -105,7 +105,6 @@ export default function ProjectSection() {
               <Button
                 size='sm'
                 asChild
-                style={{ backgroundColor: "var(--background)" }}
               >
                 <Link href={project.liveUrl} target='_blank'>
                   <ExternalLink className='mr-2 h-4 w-4' /> Demo

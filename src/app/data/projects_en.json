@@ -57,8 +57,7 @@
       "/assets/project3/1.png",
       "/assets/project3/2.png",
       "/assets/project3/3.png",
-      "/assets/project3/4.png",
-      "/assets/project3/5.png"
+      "/assets/project3/4.png"
     ],
     "technologies": ["Unity", "C#"],
     "githubUrl": "https://github.com/ducquang2/TowerDef",

@@ -1,0 +1,504 @@
+/* ============================================
+   DYNAMIC GRADIENT PORTFOLIO BACKGROUND
+   Tone: Salmverse — Crimson / Rose / Blush / Cream
+   Palette: #850e35 · #ee6983 · #ffc4c4 · #fff5e4
+   - Orbs scroll WITH page (position: absolute)
+   - 6 independent ease-in-out drift animations
+   - Scroll parallax via CSS custom props + JS
+   ============================================ */
+
+:root {
+    --bg-base: #fff5e4;
+    --col-deep: #850e35;
+    --col-rose: #ee6983;
+    --col-blush: #ffc4c4;
+    --col-cream: #fff5e4;
+}
+
+/* ============================================
+   1. ROOT WRAPPER
+   ============================================ */
+.portfolio-bg {
+    background-color: #fff5e4;
+    position: relative;
+    overflow-x: hidden;
+}
+
+.portfolio-bg>*:not(.orb-canvas) {
+    position: relative;
+    z-index: 1;
+}
+
+/* ============================================
+   2. ORB CANVAS  — absolute, scrolls with page
+   ============================================ */
+.orb-canvas {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+}
+
+/* Shared orb base */
+.orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(90px);
+    will-change: transform, opacity;
+}
+
+/* --- ORB POSITIONS & COLORS --- */
+/* Orb 1 — Deep Crimson */
+.orb-1 {
+    width: 650px;
+    height: 650px;
+    background: radial-gradient(circle, rgba(133, 14, 53, 0.45) 0%, transparent 70%);
+    top: -4%;
+    left: -10%;
+    animation: orbDrift1 14s ease-in-out infinite alternate;
+}
+
+/* Orb 2 — Rose */
+.orb-2 {
+    width: 520px;
+    height: 520px;
+    background: radial-gradient(circle, rgba(238, 105, 131, 0.55) 0%, transparent 70%);
+    top: 2%;
+    right: -8%;
+    animation: orbDrift2 19s ease-in-out infinite alternate;
+}
+
+/* Orb 3 — Blush red */
+.orb-3 {
+    width: 750px;
+    height: 750px;
+    background: radial-gradient(circle, rgba(255, 196, 196, 0.50) 0%, transparent 70%);
+    top: 28%;
+    left: 25%;
+    animation: orbDrift3 24s ease-in-out infinite alternate;
+}
+
+/* Orb 4 — Rose (darker) */
+.orb-4 {
+    width: 480px;
+    height: 480px;
+    background: radial-gradient(circle, rgba(238, 105, 131, 0.40) 0%, transparent 70%);
+    top: 52%;
+    right: 3%;
+    animation: orbDrift4 17s ease-in-out infinite alternate;
+}
+
+/* Orb 5 — Blush */
+.orb-5 {
+    width: 580px;
+    height: 580px;
+    background: radial-gradient(circle, rgba(255, 196, 196, 0.45) 0%, transparent 70%);
+    top: 68%;
+    left: -6%;
+    animation: orbDrift5 21s ease-in-out infinite alternate;
+}
+
+/* Orb 6 — Crimson accent */
+.orb-6 {
+    width: 420px;
+    height: 420px;
+    background: radial-gradient(circle, rgba(133, 14, 53, 0.30) 0%, transparent 70%);
+    top: 88%;
+    left: 42%;
+    animation: orbDrift6 16s ease-in-out infinite alternate;
+}
+
+/* ============================================
+   3. INDEPENDENT DRIFT KEYFRAMES
+   ============================================ */
+@keyframes orbDrift1 {
+    0% {
+        transform: translate(0px, 0px) scale(1);
+        opacity: 0.72;
+    }
+
+    20% {
+        transform: translate(65px, 45px) scale(1.08);
+        opacity: 0.90;
+    }
+
+    40% {
+        transform: translate(-35px, 85px) scale(0.94);
+        opacity: 0.76;
+    }
+
+    60% {
+        transform: translate(85px, -25px) scale(1.05);
+        opacity: 0.86;
+    }
+
+    80% {
+        transform: translate(22px, 62px) scale(1.02);
+        opacity: 0.80;
+    }
+
+    100% {
+        transform: translate(-55px, 32px) scale(0.97);
+        opacity: 0.72;
+    }
+}
+
+@keyframes orbDrift2 {
+    0% {
+        transform: translate(0px, 0px) scale(1);
+        opacity: 0.62;
+    }
+
+    15% {
+        transform: translate(-75px, 55px) scale(1.10);
+        opacity: 0.80;
+    }
+
+    35% {
+        transform: translate(45px, -65px) scale(0.91);
+        opacity: 0.66;
+    }
+
+    55% {
+        transform: translate(-55px, 35px) scale(1.06);
+        opacity: 0.76;
+    }
+
+    75% {
+        transform: translate(32px, 75px) scale(0.97);
+        opacity: 0.85;
+    }
+
+    100% {
+        transform: translate(-22px, -45px) scale(1.03);
+        opacity: 0.70;
+    }
+}
+
+@keyframes orbDrift3 {
+    0% {
+        transform: translate(0px, 0px) scale(1);
+        opacity: 0.50;
+    }
+
+    25% {
+        transform: translate(55px, -75px) scale(1.07);
+        opacity: 0.68;
+    }
+
+    50% {
+        transform: translate(-85px, 45px) scale(0.92);
+        opacity: 0.55;
+    }
+
+    75% {
+        transform: translate(65px, 85px) scale(1.05);
+        opacity: 0.65;
+    }
+
+    100% {
+        transform: translate(-32px, -52px) scale(0.97);
+        opacity: 0.60;
+    }
+}
+
+@keyframes orbDrift4 {
+    0% {
+        transform: translate(0px, 0px) scale(1);
+        opacity: 0.66;
+    }
+
+    20% {
+        transform: translate(-65px, -45px) scale(1.07);
+        opacity: 0.82;
+    }
+
+    45% {
+        transform: translate(55px, 65px) scale(0.93);
+        opacity: 0.70;
+    }
+
+    70% {
+        transform: translate(-35px, -75px) scale(1.08);
+        opacity: 0.85;
+    }
+
+    100% {
+        transform: translate(45px, 35px) scale(0.96);
+        opacity: 0.66;
+    }
+}
+
+@keyframes orbDrift5 {
+    0% {
+        transform: translate(0px, 0px) scale(1);
+        opacity: 0.56;
+    }
+
+    30% {
+        transform: translate(75px, -55px) scale(1.09);
+        opacity: 0.75;
+    }
+
+    55% {
+        transform: translate(-45px, 75px) scale(0.90);
+        opacity: 0.60;
+    }
+
+    80% {
+        transform: translate(65px, -35px) scale(1.04);
+        opacity: 0.70;
+    }
+
+    100% {
+        transform: translate(-58px, 48px) scale(0.95);
+        opacity: 0.56;
+    }
+}
+
+@keyframes orbDrift6 {
+    0% {
+        transform: translate(0px, 0px) scale(1);
+        opacity: 0.60;
+    }
+
+    25% {
+        transform: translate(-52px, 65px) scale(1.07);
+        opacity: 0.78;
+    }
+
+    50% {
+        transform: translate(72px, -42px) scale(0.94);
+        opacity: 0.64;
+    }
+
+    75% {
+        transform: translate(-32px, -62px) scale(1.04);
+        opacity: 0.80;
+    }
+
+    100% {
+        transform: translate(48px, 38px) scale(0.97);
+        opacity: 0.60;
+    }
+}
+
+/* ============================================
+   4. SCROLL PARALLAX SPEEDS
+   ============================================ */
+.orb-1 {
+    --speed: 0.12;
+}
+
+.orb-2 {
+    --speed: 0.07;
+}
+
+.orb-3 {
+    --speed: 0.20;
+}
+
+.orb-4 {
+    --speed: 0.09;
+}
+
+.orb-5 {
+    --speed: 0.05;
+}
+
+.orb-6 {
+    --speed: 0.15;
+}
+
+/* ============================================
+   5. GRAIN TEXTURE (subtle depth)
+   ============================================ */
+.grain-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 2;
+    pointer-events: none;
+    opacity: 0.025;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    background-repeat: repeat;
+    background-size: 128px 128px;
+}
+
+/* ============================================
+   6. SIDEBAR CARD
+   ============================================ */
+.sidebar-card {
+    background: rgba(255, 245, 228, 0.65);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border: 1px solid rgba(238, 105, 131, 0.28);
+    border-top: none;
+    box-shadow:
+        0 0 40px rgba(238, 105, 131, 0.14),
+        inset 0 1px 0 rgba(255, 255, 255, 0.85);
+    border-radius: 0 0 24px 24px;
+}
+
+/* ============================================
+   7. SECTION DIVIDER
+   ============================================ */
+.section-divider {
+    height: 2px;
+    background: linear-gradient(90deg,
+            rgba(133, 14, 53, 0.50) 10%,
+            rgba(238, 105, 131, 0.60) 45%,
+            rgba(255, 196, 196, 0.50) 80%,
+            transparent 100%);
+    border: none;
+    margin-bottom: 2rem;
+}
+
+/* ============================================
+   8. TECH CARDS
+   ============================================ */
+.tech-card {
+    background: rgba(255, 245, 228, 0.60);
+    border: 1px solid rgba(238, 105, 131, 0.25);
+    backdrop-filter: blur(12px);
+    transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.tech-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 50% 0%, rgba(238, 105, 131, 0.14) 0%, transparent 70%);
+    opacity: 0;
+    transition: opacity 0.35s ease;
+}
+
+.tech-card:hover {
+    border-color: rgba(238, 105, 131, 0.55);
+    box-shadow:
+        0 0 20px rgba(238, 105, 131, 0.20),
+        0 0 40px rgba(255, 196, 196, 0.18);
+    transform: translateY(-3px);
+}
+
+.tech-card:hover::before {
+    opacity: 1;
+}
+
+.tech-card:hover .tech-icon {
+    filter: drop-shadow(0 0 8px rgba(238, 105, 131, 0.50));
+    color: #ee6983;
+    transition: all 0.3s ease;
+}
+
+/* ============================================
+   9. CONTACT CARD & INPUTS
+   ============================================ */
+.contact-card {
+    background: rgba(255, 245, 228, 0.60);
+    border: 1px solid rgba(238, 105, 131, 0.25);
+    backdrop-filter: blur(20px);
+    box-shadow:
+        0 4px 60px rgba(238, 105, 131, 0.14),
+        inset 0 1px 0 rgba(255, 255, 255, 0.90);
+    border-radius: 16px;
+}
+
+.contact-input {
+    background: rgba(255, 245, 228, 0.75) !important;
+    border: 1px solid rgba(238, 105, 131, 0.4) !important;
+    color: #5a0b22 !important;
+    transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.contact-input:focus {
+    outline: none;
+    border-color: rgba(237, 85, 115, 0.7) !important;
+    box-shadow: 0 0 0 3px rgba(238, 105, 131, 0.12) !important;
+}
+
+.contact-input::placeholder {
+    color: rgba(180, 80, 105, 0.6) !important;
+}
+
+/* ============================================
+   10. BUTTONS
+   ============================================ */
+.btn-gradient {
+    background: linear-gradient(135deg,
+            rgba(238, 105, 131, 0.20),
+            rgba(255, 196, 196, 0.22));
+    border: 1px solid rgba(238, 105, 131, 0.40);
+    color: #850e35;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-gradient::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg,
+            rgba(238, 105, 131, 0.35),
+            rgba(255, 196, 196, 0.30));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.btn-gradient:hover::before {
+    opacity: 1;
+}
+
+.btn-gradient:hover {
+    border-color: rgba(238, 105, 131, 0.75);
+    box-shadow: 0 0 20px rgba(238, 105, 131, 0.28);
+    transform: translateY(-1px);
+}
+
+.btn-send {
+    background: linear-gradient(135deg, #850e35, #ee6983);
+    border: none;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.btn-send:hover {
+    box-shadow: 0 0 25px rgba(238, 105, 131, 0.45);
+    transform: translateY(-1px);
+    filter: brightness(1.08);
+}
+
+/* ============================================
+   11. SOCIAL BUTTONS
+   ============================================ */
+.social-btn {
+    background: rgba(255, 245, 228, 0.55);
+    border: 1px solid rgba(238, 105, 131, 0.28);
+    transition: all 0.3s ease;
+    color: rgba(133, 14, 53, 0.75);
+}
+
+.social-btn:hover {
+    background: rgba(238, 105, 131, 0.15);
+    border-color: rgba(238, 105, 131, 0.65);
+    color: #850e35;
+    box-shadow: 0 0 15px rgba(238, 105, 131, 0.28);
+    transform: translateY(-2px);
+}
+
+/* ============================================
+   CUSTOM TEXT COLOR CLASSES
+   ============================================ */
+.text-custom {
+    color: #5D0523;
+}
+
+.text-custom-light {
+    color: rgba(93, 5, 35, 0.9);
+}
+
+.text-custom-lighter {
+    color: rgba(93, 5, 35, 0.8);
+}

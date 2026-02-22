@@ -93,3 +93,22 @@
   font-weight: 400;
   font-style: normal;
 }
+
+/* ============================================
+   CUSTOM TEXT COLOR CLASSES
+   ============================================ */
+.text-custom {
+  color: #5D0523;
+}
+
+.text-custom-light {
+  color: rgba(93, 5, 35, 0.9);
+}
+
+.text-custom-lighter {
+  color: rgba(93, 5, 35, 0.8);
+}
+
+.text-custom-tech {
+  color: #D2516F;
+}

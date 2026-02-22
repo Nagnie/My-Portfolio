@@ -84,37 +84,37 @@ export function Header() {
           <nav className='hidden text-xl lg:gap-10 lg:flex'>
             <Link
               href='#about'
-              className={`transition-all duration-300 hover:text-pink-600 ${activeLink === "/" ? "text-primary font-bold" : "hover:text-foreground/80"}`}
+              className={`transition-all duration-300 hover:text-red-600 ${activeLink === "/" ? "text-primary text-custom-tech" : "hover:text-foreground/80"}`}
             >
               {t_nav.about}
             </Link>
             <Link
               href='#work-experience'
-              className={`transition-all duration-300 hover:text-pink-600 ${activeLink === "#work-experience" ? "text-primary font-bold" : "hover:text-foreground/80"}`}
+              className={`transition-all duration-300 hover:text-red-600 ${activeLink === "#work-experience" ? "text-primary text-custom-tech" : "hover:text-foreground/80"}`}
             >
               {t_nav["work-experience"]}
             </Link>
             <Link
               href='#education'
-              className={`transition-all duration-300 hover:text-pink-600 ${activeLink === "#education" ? "text-primary font-bold" : "hover:text-foreground/80"}`}
+              className={`transition-all duration-300 hover:text-red-600 ${activeLink === "#education" ? "text-primary text-custom-tech" : "hover:text-foreground/80"}`}
             >
               {t_nav.education}
             </Link>
             <Link
               href='#projects'
-              className={`transition-all duration-300 hover:text-pink-600 ${activeLink === "#projects" ? "text-primary font-bold" : "hover:text-foreground/80"}`}
+              className={`transition-all duration-300 hover:text-red-600 ${activeLink === "#projects" ? "text-primary text-custom-tech" : "hover:text-foreground/80"}`}
             >
               {t_nav.projects}
             </Link>
             <Link
               href='#technologies'
-              className={`transition-all duration-300 hover:text-pink-600 ${activeLink === "#technologies" ? "text-primary font-bold" : "hover:text-foreground/80"}`}
+              className={`transition-all duration-300 hover:text-red-600 ${activeLink === "#technologies" ? "text-primary text-custom-tech" : "hover:text-foreground/80"}`}
             >
               {t_nav.technologies}
             </Link>
             <Link
               href='#contact'
-              className={`transition-all duration-300 hover:text-pink-600 ${activeLink === "#contact" ? "text-primary font-bold" : "hover:text-foreground/80"}`}
+              className={`transition-all duration-300 hover:text-red-600 ${activeLink === "#contact" ? "text-primary text-custom-tech" : "hover:text-foreground/80"}`}
             >
               {t_nav.contact}
             </Link>

@@ -15,9 +15,16 @@ export default function EducationSection() {
   const educationData = educationEn;
 
   return (
-    <div className='space-y-8'>
+    <div className='space-y-8 text-custom'>
       {educationData.map((edu: any) => (
-        <div key={edu.id} className='rounded-lg border bg-card p-6 shadow-sm'>
+        <div
+          key={edu.id}
+          className='rounded-lg bg-card p-6 shadow-sm'
+          style={{
+            outline: "1px solid #D35270",
+            boxShadow: "0 0 40px rgba(239, 106, 133, 0.40)",
+          }}
+        >
           <div className={"flex items-center justify-between"}>
             <h3 className='text-xl font-semibold'>{edu.degree}</h3>
             <p className={"font-bold"}>{edu.period}</p>
