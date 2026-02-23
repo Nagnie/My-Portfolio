@@ -55,7 +55,7 @@
     background: radial-gradient(circle, rgba(133, 14, 53, 0.45) 0%, transparent 70%);
     top: -4%;
     left: -10%;
-    animation: orbDrift1 14s ease-in-out infinite alternate;
+    animation: pulse 14s ease-in-out infinite alternate;
 }
 
 /* Orb 2 — Rose */
@@ -63,9 +63,9 @@
     width: 520px;
     height: 520px;
     background: radial-gradient(circle, rgba(238, 105, 131, 0.55) 0%, transparent 70%);
-    top: 2%;
+    top: 5%;
     right: -8%;
-    animation: orbDrift2 19s ease-in-out infinite alternate;
+    animation: pulse 12s ease-in-out infinite alternate;
 }
 
 /* Orb 3 — Blush red */
@@ -75,17 +75,17 @@
     background: radial-gradient(circle, rgba(255, 196, 196, 0.50) 0%, transparent 70%);
     top: 28%;
     left: 25%;
-    animation: orbDrift3 24s ease-in-out infinite alternate;
+    animation: pulse 18s ease-in-out infinite alternate;
 }
 
 /* Orb 4 — Rose (darker) */
 .orb-4 {
     width: 480px;
     height: 480px;
-    background: radial-gradient(circle, rgba(238, 105, 131, 0.40) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(238, 105, 131, 0.50) 0%, transparent 70%);
     top: 52%;
     right: 3%;
-    animation: orbDrift4 17s ease-in-out infinite alternate;
+    animation: pulse 13s ease-in-out infinite alternate;
 }
 
 /* Orb 5 — Blush */
@@ -95,22 +95,43 @@
     background: radial-gradient(circle, rgba(255, 196, 196, 0.45) 0%, transparent 70%);
     top: 68%;
     left: -6%;
-    animation: orbDrift5 21s ease-in-out infinite alternate;
+    animation: pulse 10s ease-in-out infinite alternate;
 }
 
 /* Orb 6 — Crimson accent */
 .orb-6 {
     width: 420px;
     height: 420px;
-    background: radial-gradient(circle, rgba(133, 14, 53, 0.30) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(133, 14, 53, 0.50) 0%, transparent 70%);
     top: 88%;
     left: 42%;
-    animation: orbDrift6 16s ease-in-out infinite alternate;
+    animation: pulse 16s ease-in-out infinite alternate;
 }
 
 /* ============================================
-   3. INDEPENDENT DRIFT KEYFRAMES
+   3. PULSE KEYFRAME
    ============================================ */
+@keyframes pulse {
+    0% {
+        opacity: 0.56;
+        transform: scale(0.95);
+    }
+
+    50% {
+        opacity: 0.85;
+        transform: scale(1.05);
+    }
+
+    100% {
+        opacity: 0.56;
+        transform: scale(0.95);
+    }
+}
+
+/* ============================================
+   4. LEGACY INDEPENDENT DRIFT KEYFRAMES (archived)
+   ============================================ */
+/*
 @keyframes orbDrift1 {
     0% {
         transform: translate(0px, 0px) scale(1);
@@ -282,6 +303,7 @@
         opacity: 0.60;
     }
 }
+*/
 
 /* ============================================
    4. SCROLL PARALLAX SPEEDS

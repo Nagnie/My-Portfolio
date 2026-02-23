@@ -56,55 +56,58 @@ export default function ProjectDetailPage() {
   const videoId = isYouTube ? getYouTubeVideoId(project.liveUrl) : null;
 
   return (
-    <div className='min-h-screen container mx-auto px-4 py-20'>
-      <Button variant='outline' className='mb-6' asChild>
-        <Link href='/projects'>
-          <ArrowLeft className='mr-2 h-4 w-4' />
-          {t.projects.backToProjects}
-        </Link>
-      </Button>
+    <div style={{ backgroundColor: "#fff5e4" }}>
+      <div className='min-h-screen container mx-auto px-4 py-20 text-custom'>
+        <Button variant='outline' className='mb-6 btn-send' asChild>
+          <Link href='/projects'>
+            <ArrowLeft className='h-4 w-4' />
+            {t.projects.backToProjects}
+          </Link>
+        </Button>
 
-      <div className='space-y-8'>
-        <div>
-          <h1 className='text-4xl font-bold mb-4'>{project.title}</h1>
-          <p className='text-xl text-muted-foreground mb-6'>
-            {project.description}
-          </p>
+        <div className='space-y-8'>
+          <div>
+            <h1 className='text-4xl font-bold mb-4'>{project.title}</h1>
+            <p className='text-xl text-muted-foreground mb-6'>
+              {project.description}
+            </p>
 
-          <div className='flex gap-3 mb-6'>
-            <Button variant='outline' asChild>
-              <Link href={project.githubUrl} target='_blank'>
-                <FaGithub className='mr-2' /> {t.projects.viewCode}
-              </Link>
-            </Button>
-            <Button asChild>
-              <Link href={project.liveUrl} target='_blank'>
-                <ExternalLink className='mr-2 h-4 w-4' /> {t.projects.viewDemo}
-              </Link>
-            </Button>
+            <div className='flex gap-3 mb-6'>
+              <Button variant='outline' asChild>
+                <Link href={project.githubUrl} target='_blank'>
+                  <FaGithub className='mr-2' /> {t.projects.viewCode}
+                </Link>
+              </Button>
+              <Button asChild>
+                <Link href={project.liveUrl} target='_blank'>
+                  <ExternalLink className='mr-2 h-4 w-4' />{" "}
+                  {t.projects.viewDemo}
+                </Link>
+              </Button>
+            </div>
           </div>
-        </div>
 
-        {/* YouTube Video if liveUrl is YouTube */}
-        {isYouTube && videoId && (
-          <div className='w-full aspect-video rounded-lg overflow-hidden'>
-            <iframe
-              width='100%'
-              height='100%'
-              src={`https://www.youtube.com/embed/${videoId}`}
-              title={project.title}
-              frameBorder='0'
-              allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
-              allowFullScreen
-              className='w-full h-full'
-            ></iframe>
-          </div>
-        )}
+          <div className='grid gap-14 grid-cols-1 lg:grid-cols-3'>
+            <div className='lg:col-span-2 space-y-6'>
+              {/* YouTube Video if liveUrl is YouTube */}
+              {isYouTube && videoId && (
+                <div className='w-full aspect-video rounded-lg overflow-hidden'>
+                  <iframe
+                    width='100%'
+                    height='100%'
+                    src={`https://www.youtube.com/embed/${videoId}`}
+                    title={project.title}
+                    allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
+                    allowFullScreen
+                    className='w-full h-full'
+                  ></iframe>
+                </div>
+              )}
 
-        {/* Image Swiper */}
-        <div className='rounded-lg overflow-hidden border'>
-          <style>
-            {`
+              {/* Image Swiper */}
+              <div className='rounded-lg overflow-hidden border'>
+                <style>
+                  {`
                           .swiper-pagination-bullet {
                             opacity: 0.5;
                             width: 12px;
@@ -123,72 +126,77 @@ export default function ProjectDetailPage() {
                             color: var(--primary) !important;
                           }
                         `}
-          </style>
-          <Swiper
-            spaceBetween={30}
-            centeredSlides={true}
-            autoplay={{
-              delay: 3500,
-              disableOnInteraction: false,
-            }}
-            loop={true}
-            pagination={{
-              clickable: true,
-              dynamicBullets: true,
-            }}
-            navigation={true}
-            modules={[Autoplay, Pagination, Navigation]}
-            className='relative h-[500px] w-full overflow-hidden'
-          >
-            {project.images.map((img: string, index: number) => (
-              <SwiperSlide key={index}>
-                <div
-                  className='w-full h-full bg-cover bg-center'
-                  style={{
-                    backgroundImage: `url(${img})`,
-                    backgroundSize: "cover",
-                    backgroundPosition: "center",
+                </style>
+                <Swiper
+                  spaceBetween={30}
+                  centeredSlides={true}
+                  autoplay={{
+                    delay: 3500,
+                    disableOnInteraction: false,
                   }}
-                />
-              </SwiperSlide>
-            ))}
-          </Swiper>
-        </div>
+                  loop={true}
+                  pagination={{
+                    clickable: true,
+                    dynamicBullets: true,
+                  }}
+                  navigation={true}
+                  modules={[Autoplay, Pagination, Navigation]}
+                  className='relative h-[500px] w-full overflow-hidden'
+                >
+                  {project.images.map((img: string, index: number) => (
+                    <SwiperSlide key={index}>
+                      <div
+                        className='w-full h-full bg-cover bg-center'
+                        style={{
+                          backgroundImage: `url(${img})`,
+                          backgroundSize: "cover",
+                          backgroundPosition: "center",
+                        }}
+                      />
+                    </SwiperSlide>
+                  ))}
+                </Swiper>
+              </div>
+            </div>
 
-        {/* Technologies */}
-        <div>
-          <h2 className='text-2xl font-semibold mb-4'>
-            {t.projects.technologies}
-          </h2>
-          <div className='flex flex-wrap gap-3'>
-            {project.technologies.map((tech: string, index: number) => (
-              <Badge
-                key={index}
-                variant='outline'
-                className='text-base py-2 px-4'
-              >
-                {tech}
-              </Badge>
-            ))}
+            {/* Technologies */}
+            <div className='space-y-6'>
+              <h2 className='text-2xl font-semibold mb-4'>
+                {t.projects.technologies}
+              </h2>
+              <div className='flex flex-wrap gap-3'>
+                {project.technologies.map((tech: string, index: number) => (
+                  <Badge
+                    key={index}
+                    variant='outline'
+                    className='text-base py-2 px-4'
+                  >
+                    {tech}
+                  </Badge>
+                ))}
+              </div>
+
+              {/* Project Details */}
+              {project.details && project.details.length > 0 && (
+                <div>
+                  <h2 className='text-2xl font-semibold mb-4'>
+                    {t.projects.features}
+                  </h2>
+                  <ul className='space-y-3'>
+                    {project.details.map((detail: string, index: number) => (
+                      <li key={index} className='flex items-start'>
+                        <span className='mr-3 mt-1 flex-shrink-0 w-2 h-2 rounded-full'>
+                          •
+                        </span>
+                        <span className='text-lg'>{detail}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+            </div>
           </div>
         </div>
-
-        {/* Project Details */}
-        {project.details && project.details.length > 0 && (
-          <div>
-            <h2 className='text-2xl font-semibold mb-4'>
-              {t.projects.features}
-            </h2>
-            <ul className='space-y-3'>
-              {project.details.map((detail: string, index: number) => (
-                <li key={index} className='flex items-start'>
-                  <span className='mr-3 mt-1 flex-shrink-0 w-2 h-2 rounded-full bg-primary'></span>
-                  <span className='text-lg'>{detail}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-        )}
       </div>
     </div>
   );

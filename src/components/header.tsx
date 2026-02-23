@@ -72,7 +72,7 @@ export function Header() {
   const t_header = translations.en.header;
 
   return (
-    <header className='sticky top-0 z-40 w-full border-b akaya-kanadaka-regular backdrop-blur-md'>
+    <header className='text-custom sticky top-0 z-40 w-full border-b akaya-kanadaka-regular backdrop-blur-md'>
       <div className='max-w-screen flex h-20 items-center justify-between px-10 md:px-20 lg:px-25 py-5'>
         <div className='flex items-center gap-6 md:gap-10'>
           <Link href='/' className='flex items-center text-3xl'>
